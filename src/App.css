@@ -9,4 +9,18 @@
     font-size: 14px;
 }
 
+/* Terms of use */
+.terms{
+    font-size: 24px;
+    color: #333333;
+    margin:8px 0px 0px 0px;
+}
+.termsacceptance{
+    font-size: 18px;
+    margin: 20px 0px;
+}
+.termsparagraph{
+    font-size: 14px;
+    margin: 0px 0px 10px;
+}
 

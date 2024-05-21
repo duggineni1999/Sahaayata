@@ -16,6 +16,7 @@ function App() {
         <Route path='/cookie' element={<Cookie />} />
         <Route path='/refund' element={<Refund />} />
       </Routes>
+      
       <Footer/>
     
     </div>
