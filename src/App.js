@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Footer from './components/Footer';
+import TermsUse from './components/TermsUse'; // Import your TermsOfUseComponent here
+import Privacy from './components/Privacy';
+import Cookie from './components/Cookie';
+import Refund from './components/Refund';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path='/terms' element={<TermsUse />} />
+        <Route path='/privacy' element={<Privacy />} />
+        <Route path='/cookie' element={<Cookie />} />
+        <Route path='/refund' element={<Refund />} />
+      </Routes>
+      <Footer/>
+    
     </div>
   );
 }
