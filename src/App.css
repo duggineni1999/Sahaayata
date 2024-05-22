@@ -12,24 +12,28 @@
 
 /* navbar */
 
-nav .dropdown .dropdown-menu a:hover{
-    color: rgb(31, 156, 6) !important;
+nav .navbar-nav  .nav-link:hover{
+    color: #23acfc !important;
     background:none !important;
+}
+nav .navbar-nav  .nav-link{
+    padding: 25px 0;
 }
 nav .navbar-nav  a{
     font-size: .9rem !important;
     color: rgb(158, 155, 155) !important;
 }
-nav .navbar-nav  a:hover{
-    color: rgb(31, 156, 6) !important;
+nav .navbar-nav .dropdown-item:hover{
+    color:#5AADDD !important;
+    background-color: #b1daf1;
 }
 .navbar-nav .nav-item:hover .dropdown-menu {
     display: block;
-    left: 0;
-    margin-top:0px;
+    left: -50px;
+    
 }
 .navbar-nav .nav-item .dropdown-item {
-    line-height: 2.8 !important;
+    line-height:2.5rem !important;
 }
 .nav-item:hover .drop-icon{
     transform: rotate(180deg);
@@ -44,7 +48,7 @@ nav  .fa i{
    transition: all .5s ease-in-out;
 }
 nav  .fa i:hover{
-    background-color: rgb(31, 156, 6) !important;
+    background-color: #5AADDD !important;
 }
 
 .App{

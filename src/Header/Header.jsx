@@ -40,12 +40,12 @@ function Header() {
                                 </Link>
                             </li>
 
-                            < li className="nav-item dropdown" >
+                            < li className="nav-item dropdown-center " >
                                 <Link to="/about" className='text-decoration-none'>
-                                    <a className="nav-link text-black-50" aria-expanded="true">
+                                    <a className="nav-link text-black-50 position-relative" aria-expanded="true">
                                         About{''}
                                         <span>
-                                            <i className="fa fa-angle-down ms-1 drop-icon fw-bold" data-bs-toggle="dropdown" style={{ color: 'rgb(7, 223, 7)', }} aria-hidden="true"></i>
+                                            <i className="fa fa-angle-down ms-1 drop-icon fw-bold" data-bs-toggle="dropdown" style={{ color: '#5AADDD', }} aria-hidden="true"></i>
                                         </span>
                                     </a>
                                 </Link>
@@ -88,12 +88,12 @@ function Header() {
                                 </ul>
                             </li>
 
-                            < li className="nav-item dropdown" >
+                            < li className="nav-item dropdown-center" >
                                 <Link to="/immediate" className='text-decoration-none'>
-                                    <a className="nav-link text-black-50" aria-expanded="true">
+                                    <a className="nav-link text-black-50 position-relative" aria-expanded="true">
                                         Immediate{''}
                                         <span>
-                                            <i className="fa fa-angle-down ms-1 drop-icon fw-bold" data-bs-toggle="dropdown" style={{ color: 'rgb(7, 223, 7)', }} aria-hidden="true"></i>
+                                            <i className="fa fa-angle-down ms-1 drop-icon fw-bold" data-bs-toggle="dropdown" style={{ color: '#5AADDD', }} aria-hidden="true"></i>
                                         </span>
                                     </a>
                                 </Link>
@@ -136,12 +136,12 @@ function Header() {
                                 </ul>
                             </li>
 
-                            < li className="nav-item dropdown" >
+                            < li className="nav-item dropdown-center" >
                                 <Link to="/workshops" className='text-decoration-none'>
-                                    <a className="nav-link text-black-50" aria-expanded="true">
+                                    <a className="nav-link text-black-50 position-relative" aria-expanded="true">
                                         Workshop{''}
                                         <span>
-                                            <i className="fa fa-angle-down ms-1 drop-icon fw-bold" data-bs-toggle="dropdown" style={{ color: 'rgb(7, 223, 7)', }} aria-hidden="true"></i>
+                                            <i className="fa fa-angle-down ms-1 drop-icon fw-bold" data-bs-toggle="dropdown" style={{ color: '#5AADDD', }} aria-hidden="true"></i>
                                         </span>
                                     </a>
                                 </Link>
@@ -184,12 +184,12 @@ function Header() {
                                 </ul>
                             </li>
 
-                            < li className="nav-item dropdown" >
+                            < li className="nav-item dropdown-center" >
                                 <Link to="/media" className='text-decoration-none'>
-                                    <a className="nav-link text-black-50" aria-expanded="true">
+                                    <a className="nav-link text-black-50 position-relative" aria-expanded="true">
                                         Media{''}
                                         <span>
-                                            <i className="fa fa-angle-down ms-1 drop-icon fw-bold" data-bs-toggle="dropdown" style={{ color: 'rgb(7, 223, 7)', }} aria-hidden="true"></i>
+                                            <i className="fa fa-angle-down ms-1 drop-icon fw-bold" data-bs-toggle="dropdown" style={{ color: '#5AADDD', }} aria-hidden="true"></i>
                                         </span>
                                     </a>
                                 </Link>
@@ -232,12 +232,12 @@ function Header() {
                                 </ul>
                             </li>
 
-                            < li className="nav-item dropdown" >
+                            < li className="nav-item dropdown-center" >
                                 <Link to="/gallery" className='text-decoration-none'>
-                                    <a className="nav-link text-black-50" aria-expanded="true">
+                                    <a className="nav-link text-black-50 position-relative" aria-expanded="true">
                                         Gallery{''}
                                         <span>
-                                            <i className="fa fa-angle-down ms-1 drop-icon fw-bold" data-bs-toggle="dropdown" style={{ color: 'rgb(7, 223, 7)', }} aria-hidden="true"></i>
+                                            <i className="fa fa-angle-down ms-1 drop-icon fw-bold" data-bs-toggle="dropdown" style={{ color: '#5AADDD', }} aria-hidden="true"></i>
                                         </span>
                                     </a>
                                 </Link>
