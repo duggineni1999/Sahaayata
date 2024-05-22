@@ -58,7 +58,7 @@ nav .navbar-nav  .nav-link{
 }
 nav .navbar-nav  a{
     font-size: .9rem !important;
-    color: rgb(158, 155, 155) !important;
+    color: rgb(165, 164, 164) !important;
 }
 nav .navbar-nav .dropdown-item:hover{
     color:#5AADDD !important;
@@ -67,7 +67,8 @@ nav .navbar-nav .dropdown-item:hover{
 .navbar-nav .nav-item:hover .dropdown-menu {
     display: block;
     left: -50px;
-    
+    background-color: #ffffff !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.555) !important;
 }
 .navbar-nav .nav-item .dropdown-item {
     line-height:2.5rem !important;
@@ -94,6 +95,16 @@ nav  .fa i:hover{
   text-align: center;
 } */
  /* Footer  */
+/* Footer */
+.footerbg{
+    background-color: #5AADDD;
+}
+.chevron{
+    font-size: 12px;
+}
+.footerfont{
+    font-size: 14px;
+}
 
 .footerbg{
     background-color: #5AADDD;

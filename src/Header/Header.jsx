@@ -24,7 +24,7 @@ function Header() {
                 </div>
             </div>
 
-            <nav className="navbar navbar-expand-lg bg-white sticky-top shadow">
+            <nav className="navbar navbar-expand-lg bg-white  shadow" style={{position:'sticky', top:'0',zIndex:'1000'}} >
                 <div className="container">
                     <a className="navbar-brand ps-3 me-auto" href="index.html">
                         <img src="logo-medium.png" alt="Logo" height="80px" />
