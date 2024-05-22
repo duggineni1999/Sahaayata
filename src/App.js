@@ -1,11 +1,11 @@
+
 import "./App.css";
 import Header from "./Header/Header";
-import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./Footer/Footer";
+import Home from "./Home/Home";
 
-const HomePage = () => <div className="p-5">Home Page</div>;
 const AboutPage = () => <div className="p-5">About Page</div>;
 const ImmediatePage = () => <div className="p-5">Immediate Page</div>;
 const WorkshopsPage = () => <div className="p-5">Workshops Page</div>;
@@ -26,7 +26,7 @@ function App() {
         <Header />
 
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/immediate" element={<ImmediatePage />} />
           <Route path="/workshops" element={<WorkshopsPage />} />
@@ -39,10 +39,8 @@ function App() {
           <Route path="/cookie" element={<Cookie />} />
           <Route path="/refund" element={<Refund />} />
         </Routes>
-
         <Footer />
       </Router>
-
 
     </div>
   );
