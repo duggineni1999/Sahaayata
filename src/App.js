@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer';
-import TermsUse from './components/TermsUse'; // Import your TermsOfUseComponent here
+import TermsUse from './components/TermsUse';
 import Privacy from './components/Privacy';
 import Cookie from './components/Cookie';
 import Refund from './components/Refund';
