@@ -1,59 +1,3 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:wght@300;500&display=swap');
-
-
-
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Montserrat',sans-serif;
-    box-sizing: border-box;
-}
-
-/* navbar */
-
-nav .navbar-nav  .nav-link:hover{
-    color: #23acfc !important;
-    background:none !important;
-}
-nav .navbar-nav  .nav-link{
-    padding: 25px 0;
-}
-nav .navbar-nav  a{
-    font-size: .9rem !important;
-    color: rgb(158, 155, 155) !important;
-}
-nav .navbar-nav .dropdown-item:hover{
-    color:#5AADDD !important;
-    background-color: #b1daf1;
-}
-.navbar-nav .nav-item:hover .dropdown-menu {
-    display: block;
-    left: -50px;
-    
-}
-.navbar-nav .nav-item .dropdown-item {
-    line-height:2.5rem !important;
-}
-.nav-item:hover .drop-icon{
-    transform: rotate(180deg);
-    transition: all .2s ease-in-out;
-}
-nav  .fa i{
-   border-radius: 50%;
-   font-size: .9rem !important;
-   color: white !important;
-   background: rgb(85, 84, 84);
-   padding: .4rem !important;
-   transition: all .5s ease-in-out;
-}
-nav  .fa i:hover{
-    background-color: #5AADDD !important;
-}
-
-.App{
-  text-align: center;
-}
 /* Footer */
 .footerbg{
     background-color: #5AADDD;
@@ -121,10 +65,47 @@ a{
 }
 .termsacceptance{
     font-size: 18px;
-    margin: 20px 0px;
+    margin:30px 0px 10px 0px;
+    font-family: medium;
 }
 .termsparagraph{
     font-size: 14px;
-    margin: 0px 0px 10px;
+    margin: 15px 0px;
+    font-family: light;
 }
-
+.termslast{
+    font-size: 14px;
+    margin: 25px 0px;
+    color: #333333;
+    font-family: light;
+}
+/* Privacy Policy */
+.privacy{
+    font-size: 24px;
+    color: #333333;
+    margin:8px 0px 0px 0px;
+}
+.privacyintro{
+    font-size: 18px;
+    margin:30px 0px 10px 0px;
+    color: #333333;
+    font-family: medium;
+}
+.privacyenter{
+    font-size: 14px;
+    margin: 15px 0px;
+    color: #333333;
+    font-family: light;
+}
+.privacylegal{
+    font-size: 13px;
+    margin:30px 0px 10px 0px;
+    color: #333333;
+    font-family: medium;
+}
+.privacylast{
+    font-size: 14px;
+    margin: 25px 0px;
+    color: #333333;
+    font-family: light;
+}

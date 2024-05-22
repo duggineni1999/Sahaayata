@@ -1,7 +1,12 @@
-
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Footer from './components/Footer';
+import TermsUse from './components/TermsUse';
+import Privacy from './components/Privacy';
+import Cookie from './components/Cookie';
+import Refund from './components/Refund';
 import "./App.css";
 import Header from "./Header/Header";
-import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./Footer/Footer";
 import Home from "./Home/Home";
@@ -29,6 +34,7 @@ const MediaPage = () => <div className="p-5">Media Page</div>;
 const GalleryPage = () => <div className="p-5">Gallery Page</div>;
 const DonatePage = () => <div className="p-5">Donate Page</div>;
 const ContactPage = () => <div className="p-5">Contact Page</div>;
+
 
 function App() {
   return (
