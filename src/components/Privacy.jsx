@@ -22,7 +22,7 @@ function Privacy() {
       <div>
         <h4 className='privacyintro'>IV. SCOPE</h4>
         <p className='privacyenter'>This Privacy Policy applies only to your use of our website. It does not extend to any websites that are linked to from our website (whether we provide those links or whether they are shared by other users). We have no control over how your data is collected, stored or used by other websites and we advise you to check the privacy policies of any such websites before providing any data to them.</p>
-        <p className='privacyenter'>Our website is not intended for individuals under 18 years of age, without the valid consent of their parent or guardian. If we learn that we have collected or received personal information from an individual under age 18 without verification of legal guardian or parental consent, we will delete that information.  If you believe that we might have any information from or about a child under age 18, please contact us at <a href='mailto:webmaster@sahaayata.org' className='text-decoration-none'>webmaster@sahaayata.org.</a></p>
+        <p className='privacyenter'>Our website is not intended for individuals under 18 years of age, without the valid consent of their parent or guardian. If we learn that we have collected or received personal information from an individual under age 18 without verification of legal guardian or parental consent, we will delete that information.  If you believe that we might have any information from or about a child under age 18, please contact us at <a href='mailto:webmaster@sahaayata.org' className='text-decoration-none '>webmaster@sahaayata.org.</a></p>
       </div>
       <div>
         <h4 className='privacyintro'>V. DATA COLLECTION</h4>

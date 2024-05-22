@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+
 import Footer from './components/Footer';
 import TermsUse from './components/TermsUse';
 import Privacy from './components/Privacy';
@@ -8,8 +8,13 @@ import Refund from './components/Refund';
 import "./App.css";
 import Header from "./Header/Header";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Footer from "./Footer/Footer";
+
 import Home from "./Home/Home";
+import Downloads from './Media/Downloads';
+import Introduction from './Media/Introduction';
+import Launch from './Media/Launch';
+import Vardaan from './Media/Vardaan';
+import Inauguration from './Media/Inauguration';
 
 const AboutPage = () => <div className="p-5">About Page</div>;
 const ImmediatePage = () => <div className="p-5">Immediate Page</div>;
@@ -18,10 +23,7 @@ const MediaPage = () => <div className="p-5">Media Page</div>;
 const GalleryPage = () => <div className="p-5">Gallery Page</div>;
 const DonatePage = () => <div className="p-5">Donate Page</div>;
 const ContactPage = () => <div className="p-5">Contact Page</div>;
-const TermsUse = () => <div className="p-5">Terms Use</div>;
-const Privacy = () => <div className="p-5">Contact Page</div>;
-const Cookie = () => <div className="p-5">Contact Page</div>;
-const Refund = () => <div className="p-5">Contact Page</div>;
+
 
 
 function App() {
@@ -37,6 +39,11 @@ function App() {
           <Route path="/immediate" element={<ImmediatePage />} />
           <Route path="/workshops" element={<WorkshopsPage />} />
           <Route path="/media" element={<MediaPage />} />
+          <Route path='/downloads' element={<Downloads/>}/>
+          <Route path='/introduction' element={<Introduction/>}/>
+          <Route path='/launch' element={<Launch/>}/>
+          <Route path='/vardaan' element={<Vardaan/>}/>
+          <Route path='/inauguration' element={<Inauguration/>}/>
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/donate" element={<DonatePage />} />
           <Route path="/contact" element={<ContactPage />} />

@@ -8,7 +8,7 @@ function TermsUse() {
         <div>
           <h5 className='termsacceptance'>Acceptance of the Terms of Use</h5>
           <p className='termsparagraph'>Welcome to the website of Sahaayata Society, India on behalf of itself and its affiliates and licensors, licensees or service providers ("Organisation”, also referred to as “us”, “our” or “we”). These Terms of Use governs the users (“you” or “your”) access to and use of our website, including any content, functionality and services offered on or through our website, and the treatment of any personal data that you choose to submit.</p>
-          <p className='termsparagraph'>Each time you use this website, you accept and agree to be bound and abide by these Terms of Use and our <Link to='/privacy' className='text-decoration-none footerfont'>Privacy Policy,</Link> incorporated herein by reference. This Terms of Use is for an indefinite term and you understand and agree that you are bound by such terms, if you do not agree to these Terms of Use or the Privacy Policy, please do not access or use the website.</p>
+          <p className='termsparagraph'>Each time you use this website, you accept and agree to be bound and abide by these Terms of Use and our <Link to='/privacy' className='text-decoration-none footerfont text-primary'>Privacy Policy,</Link> incorporated herein by reference. This Terms of Use is for an indefinite term and you understand and agree that you are bound by such terms, if you do not agree to these Terms of Use or the Privacy Policy, please do not access or use the website.</p>
         </div>
         <div>
           <h5 className='termsacceptance'>Changes to the Terms of Use</h5>
@@ -20,10 +20,10 @@ function TermsUse() {
           <p className='termsparagraph'>We reserve the right to amend or modify the Terms of Use of this website, including but not limited to suspend or discontinue any service or material we provide on the website, in our sole discretion, at any time without notice, make modifications and alterations in any or all of the content, products and services contained on the website without prior notice. We will not be liable if for any reason all or any part of the website is unavailable at any time or for any period. From time to time, we may restrict access to some parts of the website, or the entire website, to users, including registered users. You will be deemed to have accepted such change(s) if you continue to access this website subsequent to such changes.</p>
           <p className='termsparagraph'>You are responsible for:</p>
           <ul className='termsparagraph'>
-            <li>Making all arrangements necessary for you to have access to the website.</li>
-            <li>Ensuring that all persons who access the website through your internet connection are aware of these Terms of Use and comply with them.</li>
+            < li  className='termsparagraph'>Making all arrangements necessary for you to have access to the website.</ li >
+            < li  className='termsparagraph'>Ensuring that all persons who access the website through your internet connection are aware of these Terms of Use and comply with them.</ li >
           </ul>
-          <p className='termsparagraph'>To access the website or some of the resources it offers, including course registrations, you may be asked to provide certain registration details including personal information. It is a condition of your use of the website that all the information you provide on the website is correct, current and complete. You agree that all information you provide us to register with this website or otherwise, including but not limited to through the use of any interactive features on the website, is governed by our <Link to='/privacy' className='text-decoration-none footerfont'>Privacy Policy,</Link> and you consent to all actions we take with respect to your information consistent with our Privacy Policy.</p>
+          <p className='termsparagraph'>To access the website or some of the resources it offers, including course registrations, you may be asked to provide certain registration details including personal information. It is a condition of your use of the website that all the information you provide on the website is correct, current and complete. You agree that all information you provide us to register with this website or otherwise, including but not limited to through the use of any interactive features on the website, is governed by our <Link to='/privacy' className='text-decoration-none footerfont '>Privacy Policy,</Link> and you consent to all actions we take with respect to your information consistent with our Privacy Policy.</p>
           <p className='termsparagraph'>If you choose, or are provided with, a user name, password or other identifier, or any other piece of information (“User Data”) as part of our security procedures, you must treat such information as confidential, and you must not disclose it to any other person or entity. You also acknowledge that your account is personal to you and agree not to provide any other person with access to this website or portions of it using your User Data. You agree to notify us immediately of any unauthorized access to or use of your User Data or any other breach of security. You also agree to ensure that you exit from your account at the end of each session. You should use particular caution when accessing your account from a public or shared computer so that others are not able to view or record your User Data or other personal information.</p>
           <p className='termsparagraph'>We have the right to disable any User Data, whether chosen by you or provided by us, at any time in our sole discretion if, in our opinion, you have violated any provision of these Terms of Use or we become aware of a potential breach of security through the use of your User Data.</p>
         </div>
@@ -32,17 +32,17 @@ function TermsUse() {
           <p className='termsparagraph'>The website and its entire contents, features and functionality (including but not limited to all information, software, text, displays, images, video and audio, and the design, selection and arrangement thereof), are owned by the Organisation, its affiliates, its licensors or other providers of such material and are protected by national and international copyright, trademark, patent, trade secret and other intellectual property or proprietary rights laws. Any infringement shall be vigorously prosecuted and pursued to the fullest extent permitted by law.</p>
           <p className='termsparagraph'>These Terms of Use permit you to use the website for your personal, non-commercial use only. You must not reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store or transmit any of the material on our website, except as follows:</p>
           <ul className='termsparagraph'>
-            <li>Your computer may temporarily store copies of such materials in RAM incidental to your accessing and viewing those materials.</li>
-            <li>You may store files that are automatically cached by your web browser for display enhancement purposes.</li>
-            <li>You may print or download one copy of a reasonable number of pages of the website for your own personal, non-commercial use and not for further reproduction, publication or distribution.</li>
-            <li>If we provide desktop, mobile or other applications for download, you may download a single copy to your computer or mobile device solely for your own personal, non-commercial use, provided you agree to be bound by our end user license agreement for such applications.</li>
-            <li>If we provide social media with certain features, you may take such actions as are enabled by such features.</li>
+            < li  className='termsparagraph'>Your computer may temporarily store copies of such materials in RAM incidental to your accessing and viewing those materials.</ li >
+            < li  className='termsparagraph'>You may store files that are automatically cached by your web browser for display enhancement purposes.</ li >
+            < li  className='termsparagraph'>You may print or download one copy of a reasonable number of pages of the website for your own personal, non-commercial use and not for further reproduction, publication or distribution.</ li >
+            < li  className='termsparagraph'>If we provide desktop, mobile or other applications for download, you may download a single copy to your computer or mobile device solely for your own personal, non-commercial use, provided you agree to be bound by our end user license agreement for such applications.</ li >
+            < li  className='termsparagraph'>If we provide social media with certain features, you may take such actions as are enabled by such features.</ li >
           </ul>
           <p className='termsparagraph'>You must not:</p>
           <ul className='termsparagraph'>
-            <li>Modify copies of any materials from this site.</li>
-            <li>Use any illustrations, photographs, video or audio sequences or any graphics separately from the accompanying text.</li>
-            <li>Delete or alter any copyright, trademark or other proprietary rights notices from copies of materials from this site.</li>
+            < li  className='termsparagraph'>Modify copies of any materials from this site.</ li >
+            < li  className='termsparagraph'>Use any illustrations, photographs, video or audio sequences or any graphics separately from the accompanying text.</ li >
+            < li  className='termsparagraph'>Delete or alter any copyright, trademark or other proprietary rights notices from copies of materials from this site.</ li >
           </ul>
           <p className='termsparagraph'>You must not access or use for any commercial purposes any part of the website or any services or materials available through the website.</p>
           <p className='termsparagraph'>If you wish to make any use of material on the website other than that set out in this section, please address your request to: <a href='mailto:webmaster@sahaayata.org' className='text-decoration-none'>webmaster@sahaayata.org.</a></p>
@@ -52,43 +52,43 @@ function TermsUse() {
           <h5 className='termsacceptance'>Prohibited Uses</h5>
           <p className='termsparagraph'>You may access and use the website only for lawful purposes and in accordance with these Terms of Use. Following is a partial list of the kind of content that is illegal or prohibited to post on or through the website. The Organisation reserves the right to investigate and take appropriate legal action against anyone who, in the Organisation’s sole discretion, violates this provision, including without limitation, removing the offending communication from the website and terminating the usage of such violators. Prohibited content includes, but is not limited to content that, in the sole discretion of Organisation:</p>
           <ul className='termsparagraph'>
-            <li>is patently offensive and promotes racism, bigotry, hatred or physical harm of any kind against any group or individual;</li>
-            <li>harasses or advocates harassment of another user;</li>
-            <li>exploits people in a sexual or violent manner;</li>
-            <li>contains nudity, violence, or offensive subject matter or contains a link to an adult website;</li>
-            <li>solicits personal information from anyone under 18;</li>
-            <li>provides any telephone numbers, addresses, last names, urls or email addresses;</li>
-            <li>promotes information that you know is false or misleading or promotes illegal activities or conduct that is abusive, threatening, obscene, defamatory or libelous;</li>
-            <li>violates any applicable national, state, local or international law or regulation (including, without limitation, any laws regarding the export of data or software to and from other countries);</li>
-            <li>harms or attempts to exploit or harm minors in any way by exposing them to inappropriate content, asking for personally identifiable information or otherwise.</li>
-            <li>promotes an illegal or unauthorized copy of another person's copyrighted work, such as providing pirated computer programs or links to them, providing information to circumvent manufacture-installed copy-protect devices, or providing pirated music or links to pirated music files;</li>
-            <li>sends, knowingly receives, uploads, downloads, uses or re-uses any material which does not comply with the standards set out herein;</li>
-            <li>Involves the transmission, of any advertising or promotional material without our prior written consent including any "junk mail," "chain letter" or "spam" or any other similar unsolicited contains restricted or password only access pages or hidden pages or images (those not linked to or from another accessible page);</li>
-            <li>furthers or promotes any criminal activity or enterprise or provides instructional information about illegal activities including, but not limited to making or buying illegal weapons, violating someone's privacy, or providing or creating computer viruses;</li>
-            <li>solicits passwords or personal identifying information for commercial or unlawful purposes from other users;</li>
-            <li>involves commercial activities and/or sales without our prior written consent such as contests, sweepstakes, barter, advertising, or pyramid schemes;</li>
-            <li>includes a photograph or video of another person that you have posted without that person's consent;</li>
-            <li>criminal or torturous activity, including child pornography, fraud, trafficking in obscene material, drug dealing, gambling, harassment, stalking, spamming, sending of viruses or other harmful files, copyright infringement, patent infringement, or theft of trade secrets;</li>
-            <li>advertising to, or solicitation of, any User to buy or sell any products or services through the Organisation’s services. You may not transmit any chain letters or junk email to other User’s. It is also a violation of these rules to use any information obtained from the Organisation’s website in order to contact, advertise to, solicit, or sell to any User without their prior explicit consent. If you breach any provisions of these Terms of Use and send any unsolicited communications of any kind through the website, you acknowledge that you will have caused substantial harm to the Organisation, but that the amount of such harm would be extremely difficult to ascertain;</li>
-            <li>covering or obscuring the banner advertisements on your personal profile page, or any of the Organisation’s pages;</li>
-            <li>any automated use of the system, such as using scripts to add friends or send comments or messages;</li>
-            <li>attempts to impersonate the Organisation, an Organisation employee, another user or any other person or entity (including, without limitation, by using e-mail addresses associated with any of the foregoing);</li>
-            <li>engages in any other conduct that restricts or inhibits anyone's use or enjoyment of the website, or which, as determined by us, may harm the Organisation or users of the website or expose them to liability;</li>
-            <li>using the account, username, or password of another User at any time or disclosing your password to any third party or permitting any third party to access your account;</li>
-            <li>selling or otherwise transferring your profile;</li>
-            <li>using any information obtained from the website in order to harass, abuse, or harm another person;</li>
-            <li>displaying an advertisement on your profile, or accepting payment or anything of value from a third person in exchange for your performing any commercial activity on or through the website on behalf of that person, such as placing commercial content on your profile, posting blogs or bulletins with a commercial purpose, selecting a profile with a commercial purpose, or sending private messages with a commercial purpose</li>
+            < li  className='termsparagraph'>is patently offensive and promotes racism, bigotry, hatred or physical harm of any kind against any group or individual;</ li >
+            < li  className='termsparagraph'>harasses or advocates harassment of another user;</ li >
+            < li  className='termsparagraph'>exploits people in a sexual or violent manner;</ li >
+            < li  className='termsparagraph'>contains nudity, violence, or offensive subject matter or contains a link to an adult website;</ li >
+            < li  className='termsparagraph'>solicits personal information from anyone under 18;</ li >
+            < li  className='termsparagraph'>provides any telephone numbers, addresses, last names, urls or email addresses;</ li >
+            < li  className='termsparagraph'>promotes information that you know is false or misleading or promotes illegal activities or conduct that is abusive, threatening, obscene, defamatory or libelous;</ li >
+            < li  className='termsparagraph'>violates any applicable national, state, local or international law or regulation (including, without limitation, any laws regarding the export of data or software to and from other countries);</ li >
+            < li  className='termsparagraph'>harms or attempts to exploit or harm minors in any way by exposing them to inappropriate content, asking for personally identifiable information or otherwise.</ li >
+            < li  className='termsparagraph'>promotes an illegal or unauthorized copy of another person's copyrighted work, such as providing pirated computer programs or links to them, providing information to circumvent manufacture-installed copy-protect devices, or providing pirated music or links to pirated music files;</ li >
+            < li  className='termsparagraph'>sends, knowingly receives, uploads, downloads, uses or re-uses any material which does not comply with the standards set out herein;</ li >
+            < li  className='termsparagraph'>Involves the transmission, of any advertising or promotional material without our prior written consent including any "junk mail," "chain letter" or "spam" or any other similar unsolicited contains restricted or password only access pages or hidden pages or images (those not linked to or from another accessible page);</ li >
+            < li  className='termsparagraph'>furthers or promotes any criminal activity or enterprise or provides instructional information about illegal activities including, but not limited to making or buying illegal weapons, violating someone's privacy, or providing or creating computer viruses;</ li >
+            < li  className='termsparagraph'>solicits passwords or personal identifying information for commercial or unlawful purposes from other users;</ li >
+            < li  className='termsparagraph'>involves commercial activities and/or sales without our prior written consent such as contests, sweepstakes, barter, advertising, or pyramid schemes;</ li >
+            < li  className='termsparagraph'>includes a photograph or video of another person that you have posted without that person's consent;</ li >
+            < li  className='termsparagraph'>criminal or torturous activity, including child pornography, fraud, trafficking in obscene material, drug dealing, gambling, harassment, stalking, spamming, sending of viruses or other harmful files, copyright infringement, patent infringement, or theft of trade secrets;</ li >
+            < li  className='termsparagraph'>advertising to, or solicitation of, any User to buy or sell any products or services through the Organisation’s services. You may not transmit any chain letters or junk email to other User’s. It is also a violation of these rules to use any information obtained from the Organisation’s website in order to contact, advertise to, solicit, or sell to any User without their prior explicit consent. If you breach any provisions of these Terms of Use and send any unsolicited communications of any kind through the website, you acknowledge that you will have caused substantial harm to the Organisation, but that the amount of such harm would be extremely difficult to ascertain;</ li >
+            < li  className='termsparagraph'>covering or obscuring the banner advertisements on your personal profile page, or any of the Organisation’s pages;</ li >
+            < li  className='termsparagraph'>any automated use of the system, such as using scripts to add friends or send comments or messages;</ li >
+            < li  className='termsparagraph'>attempts to impersonate the Organisation, an Organisation employee, another user or any other person or entity (including, without limitation, by using e-mail addresses associated with any of the foregoing);</ li >
+            < li  className='termsparagraph'>engages in any other conduct that restricts or inhibits anyone's use or enjoyment of the website, or which, as determined by us, may harm the Organisation or users of the website or expose them to liability;</ li >
+            < li  className='termsparagraph'>using the account, username, or password of another User at any time or disclosing your password to any third party or permitting any third party to access your account;</ li >
+            < li  className='termsparagraph'>selling or otherwise transferring your profile;</ li >
+            < li  className='termsparagraph'>using any information obtained from the website in order to harass, abuse, or harm another person;</ li >
+            < li  className='termsparagraph'>displaying an advertisement on your profile, or accepting payment or anything of value from a third person in exchange for your performing any commercial activity on or through the website on behalf of that person, such as placing commercial content on your profile, posting blogs or bulletins with a commercial purpose, selecting a profile with a commercial purpose, or sending private messages with a commercial purpose</ li >
           </ul>
           <p className='termsparagraph'>Additionally, you agree not to:</p>
           <ul className='termsparagraph'>
-            <li>Use the website in any manner that could potentially disable, overburden, damage, or impair the website or interfere with any other party's use of the website, including their ability to engage in real time activities through the website.</li>
-            <li>Use any robot, spider or other automatic device, process or means to access the website for any purpose, including monitoring or copying any of the material on the website.</li>
-            <li>Use any manual process to monitor or copy any of the material on the website or for any other unauthorized purpose without our prior written consent.</li>
-            <li>Use any device, software or routine that interferes with the proper working of the website.</li>
-            <li>Introduce any viruses, trojan horses, worms, logic bombs or other material which is malicious or technologically harmful.</li>
-            <li>Attempt to gain unauthorized access to, interfere with, damage or disrupt any parts of the website, the server on which the website is stored, or any server, computer or database connected to the website.</li>
-            <li>Attack the website via a denial-of-service attack or a distributed denial-of-service attack.</li>
-            <li>Otherwise attempt to interfere with the proper working of the website.</li>
+            < li  className='termsparagraph'>Use the website in any manner that could potentially disable, overburden, damage, or impair the website or interfere with any other party's use of the website, including their ability to engage in real time activities through the website.</ li >
+            < li  className='termsparagraph'>Use any robot, spider or other automatic device, process or means to access the website for any purpose, including monitoring or copying any of the material on the website.</ li >
+            < li  className='termsparagraph'>Use any manual process to monitor or copy any of the material on the website or for any other unauthorized purpose without our prior written consent.</ li >
+            < li  className='termsparagraph'>Use any device, software or routine that interferes with the proper working of the website.</ li >
+            < li  className='termsparagraph'>Introduce any viruses, trojan horses, worms, logic bombs or other material which is malicious or technologically harmful.</ li >
+            < li  className='termsparagraph'>Attempt to gain unauthorized access to, interfere with, damage or disrupt any parts of the website, the server on which the website is stored, or any server, computer or database connected to the website.</ li >
+            < li  className='termsparagraph'>Attack the website via a denial-of-service attack or a distributed denial-of-service attack.</ li >
+            < li  className='termsparagraph'>Otherwise attempt to interfere with the proper working of the website.</ li >
           </ul>
         </div>
         <div>
@@ -98,21 +98,21 @@ function TermsUse() {
           <p className='termsparagraph'>Any User Contributions you post to the site will be considered non-confidential and non-proprietary. By providing any User Contributions on the website, you grant us and our affiliates and service providers, and each of their and our respective licensees, successors and assigns the right to use, reproduce, modify, perform, display, distribute and otherwise disclose to third parties any such material.</p>
           <p className='termsparagraph'>You represent and warrant that:</p>
           <ul className='termsparagraph'>
-            <li>You own or control all rights in and to the User Contributions and have the right to grant the license granted above to us and our affiliates and service providers, and each of their and our respective licensees, successors and assigns.</li>
-            <li>All of your User Contributions do and will comply with these Terms of Use.</li>
-            <li>You understand and acknowledge that you are responsible for any User Contributions you submit or contribute, and you, not the Organisation, have full responsibility for such content, including its legality, reliability, accuracy and appropriateness.</li>
-            <li>You understand and acknowledge that we are not responsible, or liable to any third party, for the content or accuracy of any User Contributions posted by you or any other user of the website.</li>
+            < li  className='termsparagraph'>You own or control all rights in and to the User Contributions and have the right to grant the license granted above to us and our affiliates and service providers, and each of their and our respective licensees, successors and assigns.</ li >
+            < li  className='termsparagraph'>All of your User Contributions do and will comply with these Terms of Use.</ li >
+            < li  className='termsparagraph'>You understand and acknowledge that you are responsible for any User Contributions you submit or contribute, and you, not the Organisation, have full responsibility for such content, including its legality, reliability, accuracy and appropriateness.</ li >
+            < li  className='termsparagraph'>You understand and acknowledge that we are not responsible, or liable to any third party, for the content or accuracy of any User Contributions posted by you or any other user of the website.</ li >
           </ul>
         </div>
         <div>
           <h5 className='termsacceptance'>Monitoring and Enforcement; Termination</h5>
           <p className='termsparagraph'>We have the right to:</p>
           <ul className='termsparagraph'>
-            <li>Remove or refuse to post any User Contributions for any or no reason in our sole discretion.</li>
-            <li>Take any action with respect to any User Contributions that we deem necessary or appropriate in our sole discretion, including if we believe that such User Contributions violate the Terms of Use, infringe any intellectual property right or other right of any person or entity, threaten the personal safety of users of the website or the public or could create liability for the Organisation.</li>
-            <li>Disclose your identity or other information about you to any third party who claims that material posted by you violates their rights, including their intellectual property rights or their right to privacy.</li>
-            <li>Take appropriate legal action, including without limitation, referral to law enforcement, for any illegal or unauthorized use of the website.</li>
-            <li>Terminate or suspend your access to all or part of the website for any violation of these Terms of Use.</li>
+            < li className='termsparagraph' >Remove or refuse to post any User Contributions for any or no reason in our sole discretion.</ li >
+            < li  className='termsparagraph'>Take any action with respect to any User Contributions that we deem necessary or appropriate in our sole discretion, including if we believe that such User Contributions violate the Terms of Use, infringe any intellectual property right or other right of any person or entity, threaten the personal safety of users of the website or the public or could create liability for the Organisation.</ li >
+            < li  className='termsparagraph'>Disclose your identity or other information about you to any third party who claims that material posted by you violates their rights, including their intellectual property rights or their right to privacy.</ li >
+            < li  className='termsparagraph'>Take appropriate legal action, including without limitation, referral to law enforcement, for any illegal or unauthorized use of the website.</ li >
+            < li  className='termsparagraph'>Terminate or suspend your access to all or part of the website for any violation of these Terms of Use.</ li >
           </ul>
           <p className='termsparagraph'>Without limiting the foregoing, we have the right to fully cooperate with any law enforcement authorities or court order requesting or directing us to disclose the identity or other information of anyone posting any materials on or through the website.</p>
           <p className='termsparagraph'>You agree to hold harmless the Organisation from any claims resulting from any action taken by or on behalf of the Organisation during or as a result of its investigations and from any actions taken as a consequence of investigations by either the organisation/such parties or law enforcement authorities with respect to your User Contributions, and agree to waive any claims against the Organisation resulting from any such actions where your User Contributions are found to be in violation of these Terms of Use.</p>
@@ -138,16 +138,16 @@ function TermsUse() {
           <p className='termsparagraph'>You may link to our homepage, provided you do so in a way that is fair and legal and does not damage our reputation or take advantage of it, but you must not establish a link in such a way as to suggest any form of association, approval or endorsement on our part without our express written consent</p>
           <p className='termsparagraph'>This website may provide certain social media features that enable you to:</p>
           <ul className='termsparagraph'>
-            <li>Link from your own or certain third-party websites to certain content on this website.</li>
-            <li>Send e-mails or other communications with certain content, or links to certain content, on this website.</li>
-            <li>Cause limited portions of content on this website to be displayed or appear to be displayed on your own or certain third-party websites.</li>
+            < li  className='termsparagraph'>Link from your own or certain third-party websites to certain content on this website.</ li >
+            < li  className='termsparagraph'>Send e-mails or other communications with certain content, or links to certain content, on this website.</ li >
+            < li  className='termsparagraph'>Cause limited portions of content on this website to be displayed or appear to be displayed on your own or certain third-party websites.</ li >
           </ul>
           <p className='termsparagraph'>You may use these features solely as they are provided by us, and solely with respect to the content they are displayed with and otherwise in accordance with any additional terms and conditions we provide with respect to such features. Subject to the foregoing, you must not:</p>
           <ul className='termsparagraph'>
-            <li>Establish a link from any website that is not owned by you.</li>
-            <li>Cause the website or portions of it to be displayed, or appear to be displayed by, for example, framing, deep linking or in-line linking, on any other site.</li>
-            <li>Link to any part of the website other than the homepage.</li>
-            <li>Otherwise take any action with respect to the materials on this website that is inconsistent with any other provision of these Terms of Use.</li>
+            < li  className='termsparagraph'>Establish a link from any website that is not owned by you.</ li >
+            < li  className='termsparagraph'>Cause the website or portions of it to be displayed, or appear to be displayed by, for example, framing, deep linking or in-line linking, on any other site.</ li >
+            < li  className='termsparagraph'>Link to any part of the website other than the homepage.</ li >
+            < li  className='termsparagraph'>Otherwise take any action with respect to the materials on this website that is inconsistent with any other provision of these Terms of Use.</ li >
           </ul>
           <p className='termsparagraph'>You agree to cooperate with us in causing any unauthorized framing or linking immediately to cease. We reserve the right to withdraw linking permission without notice.</p>
           <p className='termsparagraph'>We may disable all or any social media features and any links at any time without notice in our discretion.</p>
