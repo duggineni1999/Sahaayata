@@ -93,8 +93,8 @@ nav  .fa i:hover{
 /* .App{
   text-align: center;
 } */
+ /* Footer  */
 
-/* Footer */
 .footerbg{
     background-color: #5AADDD;
 }
@@ -131,7 +131,8 @@ nav a{
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
 }
-/* Terms of use */
+
+ /* Terms of use  */
 .terms{
     font-size: 24px;
     color: #333333;
@@ -155,7 +156,7 @@ nav a{
     color: #333333;
     font-family: light;
 }
-/* Privacy Policy */
+/* Privacy Policy  */
 .privacy{
     font-size: 24px;
     color: #333333;
