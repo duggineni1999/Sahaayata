@@ -22,6 +22,7 @@ const Refund = () => <div className="p-5">Contact Page</div>;
 function App() {
   return (
     <div className="App">
+
       <Router>
         <Header />
 
@@ -42,6 +43,10 @@ function App() {
 
         <Footer />
       </Router>
+
+      
+      <Footer/>
+
     </div>
   );
 }
