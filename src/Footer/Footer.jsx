@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Footer() {
    
   return (
-    <div className='container-fluid footerbg fixed-bottom p-3'>
+    <div className='container-fluid footerbg  p-3'>
       <div className='container'>
         <div className=' row d-flex justify-content-between align-items-center py-3'>
           <div className=' col-md-8 d-flex gap-3'>

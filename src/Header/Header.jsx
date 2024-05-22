@@ -99,37 +99,86 @@ function Header() {
                                 </Link>
                                 <ul className="dropdown-menu  rounded-0 shadow border-0" style={{ backgroundColor: '#ffffffe7' }}>
                                     <li className="">
-                                        <Link to="/NPI" className='text-decoration-none'>
+                                        <Link to="/becomehealer" className='text-decoration-none'>
                                             <a className="dropdown-item text-black-50  lh-lg">
-                                                New Product Introduction
+                                               Become Healer
                                             </a>
                                         </Link>
                                     </li>
                                     <li className="">
-                                        <Link to="/PCB" className='text-decoration-none'>
+                                        <Link to="/chakradanya" className='text-decoration-none'>
                                             <a className="dropdown-item text-black-50 lh-lg" >
-                                                PCB Assembly & Box Build
+                                            Chakradanya
                                             </a>
                                         </Link>
                                     </li>
                                     <li className="">
-                                        <Link to="/EMF" className='text-decoration-none'>
+                                        <Link to="/divinemedicine" className='text-decoration-none'>
                                             <a className="dropdown-item text-black-50  lh-lg" >
-                                                Electronic Manufacturing
+                                            DivineMedicine
                                             </a>
                                         </Link>
                                     </li>
                                     <li className="">
-                                        <Link to="/ProductTesting" className='text-decoration-none'>
+                                        <Link to="/healingrequest" className='text-decoration-none'>
                                             <a className="dropdown-item text-black-50  lh-lg" >
-                                                Product Testing
+                                               HealingRequest
                                             </a>
                                         </Link>
                                     </li>
                                     <li className="">
-                                        <Link to="AfterSales" className='text-decoration-none'>
+                                        <Link to="/joinsahayak" className='text-decoration-none'>
                                             <a className="dropdown-item text-black-50 lh-lg" >
-                                                After Sales & Warranty
+                                               JoinSahayak
+                                            </a>
+                                        </Link>
+                                    </li>
+                                    <li className="">
+                                        <Link to="/kalashapuja" className='text-decoration-none'>
+                                            <a className="dropdown-item text-black-50 lh-lg" >
+                                               Kalashapuja
+                                            </a>
+                                        </Link>
+                                    </li>
+                                    <li className="">
+                                        <Link to="/personalcounselling" className='text-decoration-none'>
+                                            <a className="dropdown-item text-black-50 lh-lg" >
+                                            PersonalCounselling
+                                            </a>
+                                        </Link>
+                                    </li>
+                                    <li className="">
+                                        <Link to="/prayerrequest" className='text-decoration-none'>
+                                            <a className="dropdown-item text-black-50 lh-lg" >
+                                              PrayerRequest
+                                            </a>
+                                        </Link>
+                                    </li>
+                                    <li className="">
+                                        <Link to="/sahsayataprayer" className='text-decoration-none'>
+                                            <a className="dropdown-item text-black-50 lh-lg" >
+                                             SahayataPrayer
+                                            </a>
+                                        </Link>
+                                    </li>
+                                    <li className="">
+                                        <Link to="/sarvadukha" className='text-decoration-none'>
+                                            <a className="dropdown-item text-black-50 lh-lg" >
+                                             SarvaDukha
+                                            </a>
+                                        </Link>
+                                    </li>
+                                    <li className="">
+                                        <Link to="/shareexperience" className='text-decoration-none'>
+                                            <a className="dropdown-item text-black-50 lh-lg" >
+                                               ShareExperience
+                                            </a>
+                                        </Link>
+                                    </li>
+                                    <li className="">
+                                        <Link to="/soundaryalahiri" className='text-decoration-none'>
+                                            <a className="dropdown-item text-black-50 lh-lg" >
+                                             SoundaryaLahiri
                                             </a>
                                         </Link>
                                     </li>
