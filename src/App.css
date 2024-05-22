@@ -54,21 +54,22 @@ nav .navbar-nav  .nav-link:hover{
     background:none !important;
 }
 nav .navbar-nav  .nav-link{
-    padding: 25px 0;
+    padding: 15px 0;
 }
 nav .navbar-nav  a{
     font-size: .9rem !important;
     color: rgb(165, 164, 164) !important;
 }
 nav .navbar-nav .dropdown-item:hover{
-    color:#5AADDD !important;
-    background-color: #b1daf1;
+    color:#ffffff !important;
+    background-color: #23acfc;
 }
 .navbar-nav .nav-item:hover .dropdown-menu {
     display: block;
     left: -50px;
     background-color: #ffffff !important;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.555) !important;
+
 }
 .navbar-nav .nav-item .dropdown-item {
     line-height:2.5rem !important;
@@ -95,6 +96,11 @@ nav  .fa i:hover{
   text-align: center;
 } */
  /* Footer  */
+
+/* .App{
+  text-align: center;
+} */
+
 /* Footer */
 .footerbg{
     background-color: #5AADDD;
@@ -105,6 +111,26 @@ nav  .fa i:hover{
 .footerfont{
     font-size: 14px;
 }
+
+
+.header_phone{
+  font-size: 12.6px;
+  color: rgb(153, 153, 153);
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+}
+.header_top{
+ background-color: #f5f5f5;      
+}
+a{
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Footer  */
 
 .footerbg{
     background-color: #5AADDD;
@@ -262,3 +288,7 @@ nav a{
 
 
 
+p{
+  margin-bottom: 0px;
+  text-align: justify;
+}
