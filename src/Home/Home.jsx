@@ -57,7 +57,7 @@ function Home() {
             <div class='item'>
               <img src={img7} alt="" />
             </div>
-          </OwlCarousel>;
+          </OwlCarousel>
         </div>
 
         <div className="container">

@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import childstudy from '../assets/children_studying.jpg'
+import childstudy from '../Assets/children_studying.jpg'
 
 import SocialMedia from '../Social Media/SocialMedia'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import './about.css'
-import parent1 from '../assets/2-family-Indian.jpg'
-import parent2 from '../assets/parenting_words.png'
+import parent1 from '../Assets/2-family-Indian.jpg'
+import parent2 from '../Assets/parenting_words.png'
 import SocialMedia from '../Social Media/SocialMedia'
 
 

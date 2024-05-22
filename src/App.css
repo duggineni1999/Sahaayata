@@ -88,6 +88,7 @@ nav  .fa i{
 }
 nav  .fa i:hover{
     background-color: #5AADDD !important;
+    color: white;
 }
 
 
@@ -166,7 +167,7 @@ nav a{
   font-size: 12px;
   font-weight: 300;
   font-family: "Open Sans", sans-serif;
-  text-transform: uppercase;
+ 
 }
 
  /* Terms of use  */
@@ -291,4 +292,20 @@ nav a{
 p{
   margin-bottom: 0px;
   text-align: justify;
+}
+.members{
+  opacity: 0;
+  width: 300px;
+  top:0;
+   left:0;
+   right:0;
+   margin-left:310px
+}
+
+.faculty:hover .members {
+  opacity: 1;
+}
+
+.faculty:hover .fweicon {
+  color: white !important;
 }

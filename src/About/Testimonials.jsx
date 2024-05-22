@@ -1,10 +1,10 @@
 import React from 'react'
-import card1 from '../assets/card1.jpg'
-import card2 from '../assets/card2.jpg'
-import card3 from '../assets/card3.jpg'
-import card4 from '../assets/card4.jpg'
-import card5 from '../assets/card5.png'
-import card6 from '../assets/card6.jpg'
+import card1 from '../Assets/card1.jpg'
+import card2 from '../Assets/card2.jpg'
+import card3 from '../Assets/card3.jpg'
+import card4 from '../Assets/card4.jpg'
+import card5 from '../Assets/card5.png'
+import card6 from '../Assets/card6.jpg'
 function Testimonials() {
   return (
     <div>

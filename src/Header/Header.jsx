@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/logo-medium.png'
+import logo from '../Assets/logo-medium.png'
 
 function Header() {
     return (
@@ -108,16 +108,16 @@ function Header() {
                                             </a>
                                         </Link>
                                     </li>
-                                    <li className="">
+                                    <li className=" position-relative faculty">
                                         <Link to="/" className='text-decoration-none'>
-                                            <a className="dropdown-item position-relative text-black-50 lh-lg d-flex justify-content-between" >
+                                            <a className="dropdown-item  text-black-50 lh-lg d-flex justify-content-between" >
                                                 Faculty{''}
                                         <span>
-                                            <i className="fa fa-angle-down ms-1 drop-icon fw-bold" data-bs-toggle="dropdown" style={{ color: '#5AADDD', }} aria-hidden="true"></i>
+                                            <i className="fa fa-angle-left ms-1 drop-icon fw-bold fweicon" data-bs-toggle="dropdown" style={{ color: '#5AADDD', }} aria-hidden="true"></i>
                                         </span>
                                             </a>
                                         </Link>
-                                        <ul className="dropdown-menu px-1 position-absolute  rounded-0 shadow border-0" style={{ backgroundColor: '#ffffffe7' }}>
+                                        <ul className="dropdown-menu px-1 position-absolute  rounded-0 members shadow border-0" style={{ backgroundColor: '#ffffffe7' }}>
                                             <li className="">
                                                 <Link to="/about/faculty/sri-kiran" className='text-decoration-none'>
                                                     <a className="dropdown-item text-black-50 lh-lg" >

@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import ImageSahaayat from '../assets/whatissahaayat.jpg'
+import ImageSahaayat from '../Assets/whatissahaayat.jpg'
 import SocialMedia from '../Social Media/SocialMedia'
 function WhatIsSahaayat() {
   return (

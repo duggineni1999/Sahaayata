@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import personal from '../assets/pc1.jpg'
+import personal from '../Assets/pc1.jpg'
 import SocialMedia from '../Social Media/SocialMedia'
 import { Link } from 'react-router-dom';
 

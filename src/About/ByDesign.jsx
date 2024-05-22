@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import jointfamily from '../assets/JointFamily.png'
+import jointfamily from '../Assets/JointFamily.png'
 
 import SocialMedia from '../Social Media/SocialMedia'
 
