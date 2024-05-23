@@ -34,7 +34,7 @@
     border-color: #007bff;
   }
   
-  .btn {
+  .formbtn {
     display: block;
     width: 100%;
     padding: 8px;
@@ -89,7 +89,7 @@
   border-color: #007bff;
 }
 
-.btn {
+.formbtn {
   display: block;
   width: 100%;
   padding: 8px;

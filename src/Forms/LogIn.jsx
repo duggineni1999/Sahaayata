@@ -28,12 +28,12 @@ const Login = () => {
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
     } else {
-      console.log('Form submitted:', formData);
+     
       setFormData({
         email: '',
         password: ''
       });
-      setErrors({});
+     
     }
   };
 
@@ -60,8 +60,8 @@ const Login = () => {
           />
           {errors.password && <span>{errors.password}</span>}
         </div>
-        <button type="submit" className="btn btn-primary">Login</button>
-        <Link to='/register' className="btn btn-secondary">Go to Register</Link>
+        <button type="submit" className="btn formbtn btn-primary">Login</button>
+        <Link to='/register' className="btn formbtn btn-secondary">Go to Register</Link>
       </form>
     </div>
   );

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import SocialMedia from '../Social Media/SocialMedia'
 import vinayaka from '../Assets/Home/Sahaayata_Vinayaka_Archana.jpg'
 function ArchanaPuja() {
     return (
@@ -55,9 +55,10 @@ function ArchanaPuja() {
                 
             </div>
            <div>
-           <a href='#' className='btn btn-secondary float-end '>Register</a>
+           <a href='#' className='btn btn-secondary float-end mb-4 '>Register</a>
            </div>
             </div>
+            <SocialMedia/>
         </div>
     )
 }

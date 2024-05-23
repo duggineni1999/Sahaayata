@@ -47,6 +47,7 @@ import SahaayatCenter from './Gallery/SahaayatCenter';
 import CorporateIntel from './Gallery/CorporateIntel';
 import GeneralPublic from './Gallery/GeneralPublic';
 import Rural from './Gallery/Rural'
+import SocialLinks from './Social Media/SocialMedia';
 
 
 const AboutPage = () => <div className="p-5">About Page</div>;
@@ -118,6 +119,7 @@ function App() {
           <Route path='/login' element={<LogIn/>}/>
           <Route path='/register' element={<Register/>}/>
         </Routes>
+       
         <Footer />
      
         

@@ -88,8 +88,8 @@ const Register = () => {
           />
           {errors.confirmPassword && <span>{errors.confirmPassword}</span>}
         </div>
-        <button type="submit" className="btn btn-primary">Register</button>
-        <Link to='/login' className="btn btn-secondary">Go to Login</Link>
+        <button type="submit" className="btn  formbtn btn-primary">Register</button>
+        <Link to='/login' className="btn formbtn  btn-secondary">Go to Login</Link>
       </form>
     </div>
   );
