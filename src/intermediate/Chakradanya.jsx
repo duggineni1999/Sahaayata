@@ -1,11 +1,12 @@
 import React from 'react'
 import Main from './Main'
+import chakra from '../Assets/Immediate/Chakra.png'
 function Chakradanya() {
     return (
         <div className='container'>
 
             <Main title='Chakra Dhyana' 
-            imageUrl="Chakra.png"
+            imageUrl={chakra}
              content="'Chakra Dhyana Sadhana', is a very powerful advanced spiritual technique practiced by Hindu sages with a history of more than five thousand years. This practice is essentially focused on the seven vital 'chakras', or energy centers positioned along the length of our spinal column. Activation of these 'chakras' or energy centers, initiates the expansion of one's consciousness, moving from lower to higher states of existence in the planes of consciousness." />
             <div>
                 <h5>Activate all your Chakras</h5>

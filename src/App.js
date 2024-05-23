@@ -21,7 +21,7 @@ import JoinSahayak from "./intermediate/JoinSahayak";
 import KalashaPuja from "./intermediate/KalashaPuja";
 import PersonalCounselling from "./intermediate/PersonalCounselling";
 import PrayerRequest from "./intermediate/PrayerRequest";
-import SahsayataPrayer from "./intermediate/SahsayataPrayer";
+import SahsayataPrayer from './intermediate/SahsayataPrayer';
 import SarvaDukha from "./intermediate/SarvaDukha";
 import ShareExperience from "./intermediate/ShareExperience";
 import SoundaryaLahiri from "./intermediate/SoundaryaLahiri";
@@ -35,6 +35,7 @@ import Corporates from "./About/Corporates";
 import Testimonials from "./About/Testimonials";
 import Srikiran from "./About/Faculty/Srikiran";
 import SriChakradhar from "./About/Faculty/SriChakradhar";
+import ContactUs from './Contact/ContactUs';
 
 
 const AboutPage = () => <div className="p-5">About Page</div>;
@@ -89,7 +90,7 @@ function App() {
           <Route path="/about/testimonials" element={<Testimonials />} />
           <Route path="/about/faculty/sri-kiran" element={<Srikiran />} />
           <Route path="/about/faculty/sri-chakradhar" element={<SriChakradhar />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/contact" element={<ContactUs />} />
           <Route path="/terms" element={<TermsUse />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/cookie" element={<Cookie/>} />
