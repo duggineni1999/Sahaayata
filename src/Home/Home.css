@@ -313,3 +313,10 @@
     text-align: -webkit-match-parent;
     font-weight: 600;
 }
+.archanaheading{
+  font-size: 18px;
+}
+
+.archanasub{
+  font-size: 14px;
+}

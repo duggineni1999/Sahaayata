@@ -23,6 +23,7 @@ import prayer from '../Assets/Home/Prayer_candle.jpg'
 import vinayaka from '../Assets/Home/Sahaayata_Vinayaka_Archana.jpg'
 import meditation from '../Assets/Home/Centre_Front_Full_SW.jpg'
 import { Pagination } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 function Home() {
@@ -247,7 +248,11 @@ function Home() {
                     <a href="">Prayer Request</a>
                   </li>
                   <li>
-                    <a href="">Sahaayata Vinayaka Archana Puja</a>
+                  <Link to="/archana" className='text-decoration-none'>
+                                    <a >
+                                       Sahayata vinayaka archana puja
+                                    </a>
+                                </Link>
                   </li>
                 </ol>
               </div>

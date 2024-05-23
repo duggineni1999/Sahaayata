@@ -35,7 +35,10 @@ import Corporates from "./About/Corporates";
 import Testimonials from "./About/Testimonials";
 import Srikiran from "./About/Faculty/Srikiran";
 import SriChakradhar from "./About/Faculty/SriChakradhar";
-
+import ContactUs from './Contact/ContactUs';
+import Register from './Forms/Register';
+import ArchanaPuja from './Home/ArchanaPuja';
+import LogIn from './Forms/LogIn';
 
 const AboutPage = () => <div className="p-5">About Page</div>;
 const ImmediatePage = () => <div className="p-5">Immediate Page</div>;
@@ -55,6 +58,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/archana" element={<ArchanaPuja />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/immediate" element={<ImmediatePage />} />
           <Route path="/becomehealer" element={<BecomeHealer />} />
@@ -89,14 +93,17 @@ function App() {
           <Route path="/about/testimonials" element={<Testimonials />} />
           <Route path="/about/faculty/sri-kiran" element={<Srikiran />} />
           <Route path="/about/faculty/sri-chakradhar" element={<SriChakradhar />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/contact" element={<ContactUs />} />
           <Route path="/terms" element={<TermsUse />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/cookie" element={<Cookie/>} />
           <Route path="/refund" element={<Refund />} />
-         
+          <Route path='/login' element={<LogIn/>}/>
+          <Route path='/register' element={<Register/>}/>
         </Routes>
         <Footer />
+     
+        
       </Router>
 
     </div>

@@ -144,6 +144,20 @@ a{
   font-weight: 300;
   font-family: "Open Sans", sans-serif;
 }
+.profile {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgba(0, 0, 0, 0.226);
+    color: rgba(0, 0, 0, 0.226);;
+  }
+  .profile:hover{
+    color: black;
+    border: 2px solid black;
+  }
+  
 
 /* Footer  */
 

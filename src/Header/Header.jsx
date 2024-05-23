@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import logo from '../Assets/logo-medium.png'
 
 function Header() {
+    
     return (
         <div>
-            <div className='header_top '>
+            <div className='header_top'>
                 <div className='container'>
                     <div className='d-flex justify-content-end'>
                         <div className='d-flex gap-3 py-2'>
@@ -413,6 +414,11 @@ function Header() {
                             </li>
 
                         </ul>
+                        <div className='rounded-5 profile'>
+                            <Link to='/register'>
+                            <i class="fa-regular fa-user fs-5"></i>
+                            </Link>
+                        </div>
 
                     </div>
 
