@@ -1,5 +1,6 @@
 import React from 'react'
 import Main from './Main'
+import SocialMedia from '../Social Media/SocialMedia'
 function ShareExperience() {
   return (
     <div className='container'>
@@ -12,7 +13,7 @@ function ShareExperience() {
 <p>Apart from duplicating the effect, it also has the power to manifest with ever greater efficacy in our life again.</p>
 <p>Experience sharing also helps documents one’s learning and also serves as aguideline for others to be progressive in one’s spiritual outlook towards life.</p>
 <p>So all are encouraged to extensively share (post) their experiences. It will be the effort of Sahaayata to bring it up on the website as authentically as possible.</p>
-
+<SocialMedia/>
 </div>
   )
 }

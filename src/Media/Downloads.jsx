@@ -1,11 +1,12 @@
 import React from 'react'
 import MediaProps from './MediaProps'
-
+import './Media.css';
+import SocialMedia from '../Social Media/SocialMedia'
 function Downloads() {
   return (
     <div className='container my-5'>
       <h3 className='downloads'>Downloads</h3>
-      <div className='row mt-3'>
+      <div className='row mt-5'>
         <div className='col-md-4'>
           <MediaProps title="Sahaayata E-Leaflet" text="A 4-page leaflet describing the vision and the activities of Sahaayata" buttonUrl="../privacy folder/.pdf"  />
         </div>
@@ -27,7 +28,7 @@ function Downloads() {
           <MediaProps title="Create Your own Divine Medicine" text="A 1-page E-leaflet describing the procedure to create your own Divine medicine" buttonUrl="../privacy folder/Media 6.pdf"  />
         </div>
       </div>
-
+      <SocialMedia/>
     </div>
   )
 }

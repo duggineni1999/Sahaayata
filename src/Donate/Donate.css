@@ -1,0 +1,15 @@
+.holdingimage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn:hover {
+    background-color: rgb(219, 37, 37);
+    color: white;
+}
+.holdingsimage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}

@@ -8,6 +8,7 @@ import Introduction from './Media/Introduction';
 import Launch from './Media/Launch';
 import Vardaan from './Media/Vardaan';
 import Inauguration from './Media/Inauguration';
+import Donate from './Donate/Donate';
 import TermsUse from "./Footer/TermsUse";
 import Privacy from './Footer/Privacy';
 import Refund from './Footer/Refund';
@@ -35,6 +36,7 @@ import Corporates from "./About/Corporates";
 import Testimonials from "./About/Testimonials";
 import Srikiran from "./About/Faculty/Srikiran";
 import SriChakradhar from "./About/Faculty/SriChakradhar";
+import Projects from './Home/Projects';
 
 
 const AboutPage = () => <div className="p-5">About Page</div>;
@@ -55,6 +57,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path='/projects' element={<Projects/>}/>
           <Route path="/about" element={<AboutPage />} />
           <Route path="/immediate" element={<ImmediatePage />} />
           <Route path="/becomehealer" element={<BecomeHealer />} />
@@ -78,7 +81,7 @@ function App() {
           <Route path='/vardaan' element={<Vardaan/>}/>
           <Route path='/inauguration' element={<Inauguration/>}/>
           <Route path="/gallery" element={<GalleryPage />} />
-          <Route path="/donate" element={<DonatePage />} />
+          <Route path="/donate" element={<Donate />} />
           <Route path="/about/what-is-sahaayata" element={<WhatIsSahaayat />} />
           <Route path="/about/vision" element={<Vision />} />
           <Route path="/about/personal-portal" element={<PersonalProtal />} />

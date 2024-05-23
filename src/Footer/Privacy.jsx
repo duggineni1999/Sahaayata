@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import SocialMedia from '../Social Media/SocialMedia'
+import './Footer.css'
 function Privacy() {
   return (
-    <div className='container'>
-      <h3 className='privacy'>Privacy Policy</h3>
+    <div className='container my-4'>
+      <h3 className='privacy mt-4'>Privacy Policy</h3>
       <div>
-        <h4 className='privacyintro'>I. INTRODUCTION</h4>
+        <h4 className='privacyintro mt-3'>I. INTRODUCTION</h4>
         <p className='privacyenter'>This Privacy Policy is entered into by and between Sahaayata Society, India (the “Organisation”) and you.</p>
         <p className='privacyenter'>The organisation understands that your privacy is important to you and that you care about how your information is used and shared. We respect and value the privacy of everyone who visits our website and will only collect and use information in ways that are useful to you and in a manner consistent with your rights and our obligations under applicable law.</p>
         <p className='privacyenter'>This Privacy Policy applies to our use of any and all data collected by us in relation to your use of our website. Please read this Privacy Policy carefully and ensure that you understand it. Your acceptance of our Privacy Policy is deemed to occur upon your first visit to our website. If you do not accept and agree to this Privacy Policy, you must stop using our website immediately.</p>
@@ -22,7 +23,7 @@ function Privacy() {
       <div>
         <h4 className='privacyintro'>IV. SCOPE</h4>
         <p className='privacyenter'>This Privacy Policy applies only to your use of our website. It does not extend to any websites that are linked to from our website (whether we provide those links or whether they are shared by other users). We have no control over how your data is collected, stored or used by other websites and we advise you to check the privacy policies of any such websites before providing any data to them.</p>
-        <p className='privacyenter'>Our website is not intended for individuals under 18 years of age, without the valid consent of their parent or guardian. If we learn that we have collected or received personal information from an individual under age 18 without verification of legal guardian or parental consent, we will delete that information.  If you believe that we might have any information from or about a child under age 18, please contact us at <a href='mailto:webmaster@sahaayata.org' className='text-decoration-none '>webmaster@sahaayata.org.</a></p>
+        <p className='privacyenter'>Our website is not intended for individuals under 18 years of age, without the valid consent of their parent or guardian. If we learn that we have collected or received personal information from an individual under age 18 without verification of legal guardian or parental consent, we will delete that information.  If you believe that we might have any information from or about a child under age 18, please contact us at <a href='mailto:webmaster@sahaayata.org' className='text-decoration-none text-primary'>webmaster@sahaayata.org.</a></p>
       </div>
       <div>
         <h4 className='privacyintro'>V. DATA COLLECTION</h4>
@@ -34,7 +35,7 @@ function Privacy() {
         <p className='privacyenter'>b) We use your data for: (i) Providing and managing your account; (ii) Providing and managing your access to our website; (iii) Personalising and tailoring your experience on our website; (iv) Supplying our products and services to you; (v) Personalising and tailoring our products and services for you; (vi) Responding to communications from you; (vii) Supplying you with newsletters, alerts etc. via email, that you may have subscribed to and that you may unsubscribe or opt-out at any time by clicking on the unsubscribe link from such emails or from your account profile; (viii) Market research and (ix) Analysing your use of our website and gathering feedback to enable us to continually improve our website and your user experience.</p>
         <p className='privacyenter'>c) In some cases, the collection of data may be a statutory or contractual requirement, and we will be limited in the products and services we can provide you without your consent for us to be able to use such data.</p>
         <p className='privacyenter'>d) With your permission and/or where permitted by law, we may also use your data for marketing purposes which may include contacting you by email, telephone, text message, post and/or messaging services with information, news and offers on our products and/or services. We will not, however, send you any unsolicited marketing or spam and will take all reasonable steps to ensure that we fully protect your rights and comply with our obligations under the applicable relevant laws.</p>
-        <p className='privacyenter'>e) Advertisers whose content appears on our website may engage in what is known as “behavioural advertising” – advertising which is tailored to your preferences, based on your activity. Your activity is monitored using Cookies, as detailed in our Cookie Policy. Please note that we do not control the activities of such advertisers, nor the information they collect and use.</p>
+        <p className='privacyenter'>e) Advertisers whose content appears on our website may engage in what is known as “behavioural advertising” – advertising which is tailored to your preferences, based on your activity. Your activity is monitored using Cookies, as detailed in our <Link to='/cookie' className='text-decoration-none footerfont text-primary'>Cookie Policy</Link>. Please note that we do not control the activities of such advertisers, nor the information they collect and use.</p>
         <p className='privacyenter'>f) Legal basis: We will ensure that your personal data is processed lawfully, fairly, and transparently, without adversely affecting your rights. We will only process your personal data if at least one of the following basis applies: (i) you have given consent to the processing of your personal data for one or more specific purposes; (ii) processing is necessary for the performance of a contract to which you are a party or in order to take steps at the request of you prior to entering into a contract; (iii) processing is necessary for compliance with a legal obligation to which we are subject; (iv) processing is necessary to protect the vital interests of you or of another natural person; (v) processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller and/or processing is necessary for the purposes of the legitimate interests pursued by us or by a third party, except where such interests are overridden by the fundamental rights and freedoms of the data subject which require protection of personal data, in particular where the data subject is a child.</p>
         <p className='privacyenter'>g) Sensitive Information: Sensitive information as defined under the relevant national data privacy laws, will be used by us only: (i) for the primary purpose for which it was obtained; and/or (ii) with your consent; or where required or authorized by applicable law.</p>
       </div>
@@ -60,7 +61,7 @@ function Privacy() {
       <div>
         <h4 className='privacyintro'>X. RIGHT TO WITHDRAW INFORMATION</h4>
         <p className='privacyenter'>a) You may access certain areas of our website without providing any data at all. However, to use all features and functions available on our website you may be required to submit or allow for the collection of certain data.</p>
-        <p className='privacyenter'>b) You may restrict your internet browser’s use of Cookies. For more information, see our <Link to='/cookie' className='text-decoration-none   footerfont'>Cookie Policy</Link>.</p>
+        <p className='privacyenter'>b) You may restrict your internet browser’s use of Cookies. For more information, see our <Link to='/cookie' className='text-decoration-none   footerfont text-primary'>Cookie Policy</Link>.</p>
         <p className='privacyenter'>c) You may withdraw your consent for us to use your personal data at any time by deleting your account or by contacting us using the details set out herein below, and we will delete your data from our systems. However, you acknowledge this may limit our ability to provide the best possible products and services to you.</p>
       </div>
       <div>
@@ -81,7 +82,7 @@ function Privacy() {
       </div>
       <div>
         <h4 className='privacyintro'>XIV. CONTACT US</h4>
-        <p className='privacyenter'>If you have any questions about our website or this Privacy Policy, please contact us by email at  <a href='mailto:webmaster@sahaayata.org' className='text-decoration-none'>webmaster@sahaayata.org.</a> Please ensure that your query is clear, particularly if it is a request for information about the data we hold about you.</p>
+        <p className='privacyenter'>If you have any questions about our website or this Privacy Policy, please contact us by email at  <a href='mailto:webmaster@sahaayata.org' className='text-decoration-none text-primary'>webmaster@sahaayata.org.</a> Please ensure that your query is clear, particularly if it is a request for information about the data we hold about you.</p>
       </div>
       <div>
         <h4 className='privacyintro'>XV. CHANGES TO THE PRIVACY POLICY</h4>
@@ -94,18 +95,19 @@ function Privacy() {
       <div>
         <h4 className='privacyintro'>XVIII. APPLICABLE FOR PERSONS FROM THE EUROPEAN ECONOMIC AREA</h4>
         <p className='privacylegal'>a) Legal Framework</p>
-        <p className='privacyenter'>It has been concluded by the European Commission that particular countries outside of the European Economic Area (the “EEA” which consists of all European Union member states, plus Norway, Iceland, and Liechtenstein) require to adequately protect personal data. This can be reviewed under <a href='https://commission.europa.eu/law/law-topic/data-protection/data-transfers-outside-eu/adequacy-protection-personal-data-non-eu-countries_en#dataprotectionincountriesoutsidetheeu' className='text-decoration-none'>European Commission adequacy decision</a>. Where data is being transferred from the EEA to other countries, we shall comply with legal frameworks that ascertain an equivalent level of protection with European Union law.</p>
+        <p className='privacyenter'>It has been concluded by the European Commission that particular countries outside of the European Economic Area (the “EEA” which consists of all European Union member states, plus Norway, Iceland, and Liechtenstein) require to adequately protect personal data. This can be reviewed under <a href='https://commission.europa.eu/law/law-topic/data-protection/data-transfers-outside-eu/adequacy-protection-personal-data-non-eu-countries_en#dataprotectionincountriesoutsidetheeu' className='text-decoration-none text-primary'>European Commission adequacy decision</a>. Where data is being transferred from the EEA to other countries, we shall comply with legal frameworks that ascertain an equivalent level of protection with European Union law.</p>
         
         <p className='privacylegal'>b) EU-US and Swiss-US Privacy Shield frameworks</p>
         <p className='privacyenter'>We shall comply with the EU-US and Swiss-US Privacy Shield Frameworks as set forth by the US Department of Commerce regarding the collection, use, and retention of personal information from European Union member countries and Switzerland, respectively.</p>
 
         <p className='privacylegal'>c) Model Contract Clauses</p>
-        <p className='privacyenter'>The Organisation shares personal information within the Organisation and to other trusted businesses or persons to process it for us, based on our guidelines and in compliance with this Privacy Policy and any other appropriate confidentiality and security measures. Your information may be transferred, or stored and processed in other countries outside of where you live for the purposes as described in this Privacy Policy. These data transfers are necessary to provide the services to you and to globally operate and provide our products to you. We utilize <a href='../privacy folder/commission decision.pdf' className='text-decoration-none'> standard contract clauses,</a>rely on the European Commission's <a href='https://commission.europa.eu/law/law-topic/data-protection/data-transfers-outside-eu/adequacy-protection-personal-data-non-eu-countries_en#dataprotectionincountriesoutsidetheeu' className='text-decoration-none'>adequacy decisions</a> about certain countries, as applicable, and obtain your consent for these data transfers to other countries.</p>
+        <p className='privacyenter'>The Organisation shares personal information within the Organisation and to other trusted businesses or persons to process it for us, based on our guidelines and in compliance with this Privacy Policy and any other appropriate confidentiality and security measures. Your information may be transferred, or stored and processed in other countries outside of where you live for the purposes as described in this Privacy Policy. These data transfers are necessary to provide the services to you and to globally operate and provide our products to you. We utilize <a href='src\Assets\Footer\commission decision.pdf' className='text-decoration-none text-primary'> standard contract clauses,</a>rely on the European Commission's <a href='https://commission.europa.eu/law/law-topic/data-protection/data-transfers-outside-eu/adequacy-protection-personal-data-non-eu-countries_en#dataprotectionincountriesoutsidetheeu' className='text-decoration-none text-primary'>adequacy decisions</a> about certain countries, as applicable, and obtain your consent for these data transfers to other countries.</p>
       
         <p className='privacylegal'>d) DPO</p>
-        <p className='privacyenter'>If, after contacting us, you feel that your concerns have not been addressed to your satisfaction, you can contact our data protection officer (“DPO”) at  <a href='mailto:webmaster@sahaayata.org' className='text-decoration-none'>webmaster@sahaayata.org.</a></p>
+        <p className='privacyenter'>If, after contacting us, you feel that your concerns have not been addressed to your satisfaction, you can contact our data protection officer (“DPO”) at  <a href='mailto:webmaster@sahaayata.org' className='text-decoration-none text-primary'>webmaster@sahaayata.org.</a></p>
       </div>
       <p className='privacylast'>Last updated on 31 May 2021</p>
+      <SocialMedia/>
     </div>
   )
 }

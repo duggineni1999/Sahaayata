@@ -1,10 +1,10 @@
 import React from 'react'
-
+import SocailMedia from '../Social Media/SocialMedia'
 function Cookie() {
   return (
     <div className='container'>
       <h2 className='heading py-3'>Cookie Policy</h2>
-      <p>BY CONTINUING TO USE THIS SITE AND SERVICES, YOU ARE AGREEING TO THE USE OF COOKIES AND SIMILAR TECHNOLOGIES FOR THE PURPOSES WE DESCRIBE IN THIS COOKIE POLICY. IF YOU DO NOT ACCEPT THE USE OF COOKIES AND SIMILAR TECHNOLOGIES, DO NOT USE THIS SITE.</p>
+      <p className=''>BY CONTINUING TO USE THIS SITE AND SERVICES, YOU ARE AGREEING TO THE USE OF COOKIES AND SIMILAR TECHNOLOGIES FOR THE PURPOSES WE DESCRIBE IN THIS COOKIE POLICY. IF YOU DO NOT ACCEPT THE USE OF COOKIES AND SIMILAR TECHNOLOGIES, DO NOT USE THIS SITE.</p>
       <p>This Site uses cookies to better the users experience while visiting the Site. Where applicable this Site uses a cookie control system allowing the user on their first visit to the Site to allow or disallow the use of cookies on their computer / device. This complies with recent legislation requirements for Sites to obtain explicit consent from users before leaving behind or reading files such as cookies on a user’s computer / device.</p>
       <p>This Cookie Policy sets out how we, use cookies and similar technologies on this Site. We may update this Cookie Policy from time to time in order to keep you fully informed about our latest practices involving cookies and similar technologies on this Site. You should check this Cookie Policy each time you visit our Site in order to find out whether our use of cookies and similar technologies has changed.</p>
       <h5>ABOUT COOKIES</h5>
@@ -13,36 +13,64 @@ function Cookie() {
       <p>Persistent cookies are placed on your computer when you access a website and expire at a fixed point in time or if you manually delete them from your browser, whichever occurs first.</p>
       <p>Cookies will be set either by our Site domain or by third party domains on our behalf. Cookies set by us on our Site domain are referred to as ‘first party’ cookies. Cookies set by third party domains, or set on or via our domain on behalf of third parties, are referred to as ‘third party’ cookies.</p>
 <p>Cookies do not usually contain personal information. Cookies may, however, be used in combination with other information to identify you.</p>
-<p>We use first party and third party cookies on our Site, and both session and persistent cookies If you require further information about cookies in general, please visit <span><a href='https://www.allaboutcookies.org' target="_blank" rel="noopener noreferrer">www.allaboutcookies.org</a></span>.</p>
+<p>We use first party and third party cookies on our Site, and both session and persistent cookies If you require further information about cookies in general, please visit <span><a href='https://www.allaboutcookies.org' target="_blank" rel="noopener noreferrer" className='text-primary'>www.allaboutcookies.org</a></span>.</p>
 <h5>TYPES OF COOKIES</h5>
 <div class='row'>
  
-    <div class='d-flex  gap-5'>
-      <p>Type of Cookie</p>
-      <p>What do they do?</p>
-      <p>Do these cookies collect my personal data / identify me?</p>
-     
-     
-     
+<div className='row'>
+  <div className='col-md-2 d-flex'>
+      <p className='fw-semibold'>Type of Cookie</p>
+  </div>
+  <div className='col-md-5 fw-semibold'>
+     What do they do?  
+  </div>
+  <div className='col-md-5 fw-semibold'>
+  Do these cookies collect my personal data / identify me?
+  </div>
+</div>
+<div className='row my-4'>
+    <div className='col-md-2 fw-semibold'>
+    Essential
     </div>
-    <div className='d-flex   gap-5'>
-    <p >Essential</p>
-      <p className=''>These cookies are essential to make our Site work correctly, they enable you to move around our Site and use our features. Examples include remembering previous actions (e.g. entered text) when navigating back to a page in the same session.</p>
-      
-      <p>These cookies allow our Site to remember the choices you make (such as your user name, language or the region you are in) to provide a more personalized online experience. They can also enable visitors to watch videos, play games and engage with social tools, such as blogs, chatrooms and forums.</p>
+    <div className='col-md-5'>
+	
+    These cookies are essential to make our Site work correctly, they enable you to move around our Site and use our features. Examples include remembering previous actions (e.g. entered text) when 
+
+navigating back to a page in the same session.
     </div>
-    <div className='d-flex  gap-5'>
-    <p className=''>Performance</p>
-    <p >These cookies help us understand how visitors interact with our Site by providing information about the areas visited, the time spent on the Site, and any issues encountered, such as error messages. This helps us improve the performance of our Site.</p>
-      <p>We might use information that we hold about you to show you relevant and "targeted advertising" through other companies' sites, like Google and Facebook.</p>
-      
+    <div className='col-md-5'>
+      <p>These cookies don’t identify you as an individual.</p>
+      <p>If you do not accept these cookies, it may affect the performance of the Site, or parts of it.</p>
     </div>
-    <div className='d-flex  gap-5'>
-   <p>Functionality</p>
-   
-      <p>The information these cookies collect may include personally identifiable information that you have disclosed, such as your username or profile picture. We shall always be transparent with you about what information we collect, what we do with it and with whom we share it.</p>
-      <p>If you do not accept these cookies, it may affect the performance and functionality of the Site and may restrict access to content on the Site.</p>
+</div>
+<div className='row'>
+    <div className='col-md-2 fw-semibold'>
+    Performance
     </div>
+    <div className='col-md-5'>
+<p>	
+These cookies help us understand how visitors interact with our Site by providing information about the areas visited, the time spent on the Site, and any issues encountered, such as error messages. This helps us improve the performance of our Site.</p>
+
+ <p>We might use information that we hold about you to show you relevant and "targeted advertising" through other companies' sites, like Google and Facebook.</p>
+    </div>
+    <div className='col-md-5'>
+    These cookies don’t identify you as an individual. All data is collected and aggregated anonymously.
+    </div>
+</div>
+<div className='row my-4'>
+    <div className='col-md-2 fw-semibold'>
+    Functionality
+    </div>
+    <div className='col-md-5'>
+	
+    These cookies allow our Site to remember the choices you make (such as your user name, language or the region you are in) to provide a more personalized online experience. They can also enable visitors to watch videos, play games and engage with social tools, such as blogs, chatrooms and forums.
+    </div>
+    <div className='col-md-5'>
+    <p>The information these cookies collect may include personally identifiable information that you have disclosed, such as your username or profile picture. We shall always be transparent with you about what information we collect, what we do with it and with whom we share it.</p>
+
+<p>If you do not accept these cookies, it may affect the performance and functionality of the Site and may restrict access to content on the Site.</p>
+    </div>
+</div>
   
 </div>
 <h5>OTHER TRACKING TECHNOLOGIES</h5>
@@ -52,32 +80,32 @@ function Cookie() {
 <p>For more information on how to control cookies, check your browser or device’s settings for how you can control or reject cookies, or visit the following links:</p>
 <ul >
   <li>
-    <a className='text-decoration-none' href='https://support.google.com/accounts/answer/61416?co=GENIE.Platform%3DDesktop&hl=en'>Google Chrome</a>
+    <a className='text-decoration-none text-primary' href='https://support.google.com/accounts/answer/61416?co=GENIE.Platform%3DDesktop&hl=en'>Google Chrome</a>
   </li>
   <li>
-    <a  className='text-decoration-none' href="https://support.microsoft.com/en-us/windows/microsoft-edge-browsing-data-and-privacy-bb8174ba-9d73-dcf2-9b4a-c582b4e640dd">Microsoft Edge</a>
+    <a  className='text-decoration-none text-primary' href="https://support.microsoft.com/en-us/windows/microsoft-edge-browsing-data-and-privacy-bb8174ba-9d73-dcf2-9b4a-c582b4e640dd">Microsoft Edge</a>
   </li>
   <li>
-    <a   className='text-decoration-none'  href='https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop?redirectslug=enable-and-disable-cookies-website-preferences&redirectlocale=en-US'>Mozilla Firefox</a>
+    <a   className='text-decoration-none text-primary'  href='https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop?redirectslug=enable-and-disable-cookies-website-preferences&redirectlocale=en-US'>Mozilla Firefox</a>
   </li>
   <li>
-    <a  className='text-decoration-none' href='https://support.microsoft.com/en-gb/windows/manage-cookies-in-microsoft-edge-view-allow-block-delete-and-use-168dab11-0753-043d-7c16-ede5947fc64d'>Microsoft Internet Explorer</a>
+    <a  className='text-decoration-none text-primary' href='https://support.microsoft.com/en-gb/windows/manage-cookies-in-microsoft-edge-view-allow-block-delete-and-use-168dab11-0753-043d-7c16-ede5947fc64d'>Microsoft Internet Explorer</a>
   </li>
   <li>
-    <a  className='text-decoration-none' href='https://help.opera.com/en/latest/web-preferences/'>opera</a>
+    <a  className='text-decoration-none text-primary' href='https://help.opera.com/en/latest/web-preferences/'>opera</a>
   </li>
   <li>
-    <a  className='text-decoration-none' href='https://support.apple.com/kb/ph21411?locale=en_US'>Apple Safari</a>
+    <a  className='text-decoration-none text-primary' href='https://support.apple.com/kb/ph21411?locale=en_US'>Apple Safari</a>
   </li>
 </ul>
 <p>To find information relating to other browsers, visit the browser developer's Site.</p>
-<p>To opt out of being tracked by Google Analytics across all websites, visit <span><a  className='text-decoration-none'  href='To opt out of being tracked by Google Analytics across all websites, visit http://tools.google.com/dlpage/gaoptout.'>http://tools.google.com/dlpage/gaoptout.</a></span></p>
-<p>In addition, you may opt-out from cookies by visiting the following websites and selecting which company cookies you would like to opt-out through the <span><a className='text-decoration-none' href='https://optout.aboutads.info/?lang=EN&c=2#!%2F'>Digital Advertising Alliance </a></span> in the US, the <span><a className='text-decoration-none' href='https://youradchoices.ca/'>Digital Advertising Alliance of Canada</a></span> in Canada or the European Interactive Digital Advertising Alliance in Europe. Please note that ad blockers and tools that restrict our cookie use may interfere with these controls.</p>
+<p>To opt out of being tracked by Google Analytics across all websites, visit <span><a  className='text-decoration-none text-primary'  href='To opt out of being tracked by Google Analytics across all websites, visit http://tools.google.com/dlpage/gaoptout.'>http://tools.google.com/dlpage/gaoptout.</a></span></p>
+<p>In addition, you may opt-out from cookies by visiting the following websites and selecting which company cookies you would like to opt-out through the <span><a className='text-decoration-none text-primary' href='https://optout.aboutads.info/?lang=EN&c=2#!%2F'>Digital Advertising Alliance </a></span> in the US, the <span><a className='text-decoration-none text-primary' href='https://youradchoices.ca/'>Digital Advertising Alliance of Canada</a></span> in Canada or the European Interactive Digital Advertising Alliance in Europe. Please note that ad blockers and tools that restrict our cookie use may interfere with these controls.</p>
 <p>If you disable the cookies that we use, this may impact your experience while on our site, for example you may not be able to visit certain areas of our site or you may not receive personalized information when you visit our site. </p>
 <h5>PRIVACY POLICY</h5>
 <p>For more information about how we use information collected by cookies and other tracking technologies, please refer to our Privacy Policy posted on the Site. This Cookie Policy is part of and is incorporated into our Privacy Policy. By using the Site, you agree to be bound by this Cookie Policy and our Privacy Policy.</p>
 <h5>MORE DETAILED INFORMATION</h5>
-<a   className='text-decoration-none'  href='https://www.artofliving.org/in-en/cookie-policy'>Essential</a>
+<a   className='text-decoration-none text-primary'  href='https://www.artofliving.org/in-en/cookie-policy'>Essential</a>
 <div className=''>
   <div className='col-md-4 d-flex gap-3'>
 <h5>Provider</h5>
@@ -96,11 +124,11 @@ function Cookie() {
     </div>
     </div>
     <div>
-    <a className='text-decoration-none' href='https://www.artofliving.org/in-en/cookie-policy'>Performance</a><br></br>
-  <a className='text-decoration-none' href=' https://www.artofliving.org/in-en/cookie-policy'>Functionality</a>
+    <a className='text-decoration-none text-primary' href='https://www.artofliving.org/in-en/cookie-policy'>Performance</a><br></br>
+  <a className='text-decoration-none text-primary' href=' https://www.artofliving.org/in-en/cookie-policy'>Functionality</a>
   </div>
    
-  
+  <SocailMedia/>
 
 
 

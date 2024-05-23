@@ -1,5 +1,6 @@
 import React from 'react'
 import Main from './Main'
+import SocailMedia from '../Social Media/SocialMedia'
 function JoinSahayak() {
   return (
     
@@ -13,7 +14,7 @@ Your contribution in this area will help you in earning a tremendous amount of S
 
 The only qualification you need to serve as a Sahaayak is, a passion to serve humanity, to touch human lives and work for their betterment with selfless motive. You are also encouraged to invite and introduce Sahaayata to your friends, relatives who may also wish to volunteer their Sahaayata for this noble humanitarian mission … welcome aboard ! "/>
 
-
+<SocailMedia/>
 
 </div>
   )

@@ -1,0 +1,41 @@
+ /* Terms of use  */
+ .terms{
+    font-size: 24px;
+    color: #333333;
+}
+.termsacceptance{
+    font-size: 18px;
+    color: #333333;
+}
+.termsparagraph{
+    font-size: 14px;
+    color: #333333;
+}
+.termslast{
+    font-size: 14px;
+    color: #333333;
+}
+/* Privacy Policy  */
+.privacy{
+    font-size: 24px;
+    color: #333333;
+}
+.privacyintro{
+    font-size: 18px;
+    color: #333333;   
+}
+.privacyenter{
+    font-size: 14px;
+    margin: 15px 0px;
+    color: #333333;
+}
+.privacylegal{
+    font-size: 13px;
+    margin:30px 0px 10px 0px;
+    color: #333333;
+}
+.privacylast{
+    font-size: 14px;
+    margin: 25px 0px;
+    color: #333333;
+}
