@@ -91,6 +91,20 @@ nav  .fa i:hover{
     color: white;
 }
 
+.member{
+    opacity: 0;
+    width: 200px;
+    top:0;
+     left:0;
+     right:0;
+     margin-left:210px
+  }
+  
+  .faculty:hover .member {
+    opacity: 1;
+  }
+  
+
 
 
 /* .App{
