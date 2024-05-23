@@ -415,6 +415,35 @@ function Header() {
                                 </Link>
                             </li>
 
+                            < li className="nav-item dropdown-center" >
+                                <Link to="/" className='text-decoration-none'>
+                                    <a className="nav-link text-black-50 position-relative text-uppercase" aria-expanded="true">
+                                        User Portal{''}
+                                        <span>
+                                            <i className="fa fa-angle-down ms-1 drop-icon fw-bold" data-bs-toggle="dropdown" style={{ color: '#5AADDD', }} aria-hidden="true"></i>
+                                        </span>
+                                    </a>
+                                </Link>
+                                <ul className="dropdown-menu  rounded-0 shadow border-0" style={{ backgroundColor: '#ffffffe7' }}>
+                                    <li className="">
+                                        <Link to="/user-login" className='text-decoration-none'>
+                                            <a className="dropdown-item text-black-50  lh-lg">
+                                                Login
+                                            </a>
+                                        </Link>
+                                    </li>
+                                    <li className="">
+                                        <Link to="/user-registration" className='text-decoration-none'>
+                                            <a className="dropdown-item text-black-50 lh-lg" >
+                                               Registration
+                                            </a>
+                                        </Link>
+                                    </li>
+                                    
+                                    
+                                </ul>
+                            </li>
+
                         </ul>
                         <div className='rounded-5 profile'>
                             <Link to='/register'>

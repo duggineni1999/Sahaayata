@@ -49,6 +49,10 @@ import GeneralPublic from './Gallery/GeneralPublic';
 import Rural from './Gallery/Rural'
 import SocialLinks from './Social Media/SocialMedia';
 
+import Login from './UserPortal/Login';
+import Registration from './UserPortal/Registration';
+
+
 
 const AboutPage = () => <div className="p-5">About Page</div>;
 const ImmediatePage = () => <div className="p-5">Immediate Page</div>;
@@ -112,6 +116,13 @@ function App() {
           <Route path="/about/faculty/sri-kiran" element={<Srikiran />} />
           <Route path="/about/faculty/sri-chakradhar" element={<SriChakradhar />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/photo-gallery/first-program" element={<SahaayatCenter />} />
+          <Route path="/photo-gallery/rural" element={<Rural />} />
+          <Route path="/photo-gallery/general-public" element={<GeneralPublic />} />
+          <Route path="/photo-gallery/corporate-and-intelligentia" element={<CorporateIntel />} />
+          <Route path="/user-login" element={<Login />} />
+          <Route path="/user-registration" element={<Registration />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="/terms" element={<TermsUse />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/cookie" element={<Cookie/>} />
