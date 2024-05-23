@@ -297,12 +297,12 @@ p{
   text-align: justify;
 }
 .members{
-  opacity: 0;
-  width: 300px;
-  top:0;
-   left:0;
-   right:0;
-   margin-left:310px
+    opacity: 0;
+    width: 300px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: 310px
 }
 
 .faculty:hover .members {
