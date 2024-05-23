@@ -8,13 +8,13 @@ function Downloads() {
       <h3 className='downloads'>Downloads</h3>
       <div className='row mt-5'>
         <div className='col-md-4'>
-          <MediaProps title="Sahaayata E-Leaflet" text="A 4-page leaflet describing the vision and the activities of Sahaayata" buttonUrl="../privacy folder/.pdf"  />
+          <MediaProps title="Sahaayata E-Leaflet" text="A 4-page leaflet describing the vision and the activities of Sahaayata" buttonUrl="../privacy folder/Media 1.pdf"  />
         </div>
         <div className='col-md-4'>
           <MediaProps title="Sahaayata Vardaan Course (Colour)" text="A 4-page Multi Colour E-leaflet describing the Sahaayata 2 Days Vardaan Course" buttonUrl="../privacy folder/Media 2.pdf"  />
         </div>
         <div className='col-md-4'>
-          <MediaProps title="Sahaayata Vardaan Course (One Colour)" text="A 2-page Single Colour E-leaflet describing the Sahaayata 2 Days Vardaan Course" buttonUrl="../privacy folder/Media 3.pdf"  />
+          <MediaProps title="Sahaayata Vardaan Course" text="A 2-page Single Colour E-leaflet describing the Sahaayata 2 Days Vardaan Course" buttonUrl="../privacy folder/Media 3.pdf"  />
         </div>
       </div>
       <div className='row my-4'>

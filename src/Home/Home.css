@@ -313,3 +313,8 @@
     text-align: -webkit-match-parent;
     font-weight: 600;
 }
+
+/* Projects */
+.association{
+  font-size: 14px;
+}

@@ -37,7 +37,10 @@ import Testimonials from "./About/Testimonials";
 import Srikiran from "./About/Faculty/Srikiran";
 import SriChakradhar from "./About/Faculty/SriChakradhar";
 import Projects from './Home/Projects';
-
+import SahaayatCenter from './Gallery/SahaayatCenter';
+import CorporateIntel from './Gallery/CorporateIntel';
+import GeneralPublic from './Gallery/GeneralPublic';
+import Rural from './Gallery/Rural'
 
 const AboutPage = () => <div className="p-5">About Page</div>;
 const ImmediatePage = () => <div className="p-5">Immediate Page</div>;
@@ -81,6 +84,10 @@ function App() {
           <Route path='/vardaan' element={<Vardaan/>}/>
           <Route path='/inauguration' element={<Inauguration/>}/>
           <Route path="/gallery" element={<GalleryPage />} />
+          <Route path='/sahaayatcenter' element={<SahaayatCenter/>}/>
+          <Route path='/rural' element={<Rural/>}/>
+          <Route path='/generalpublic' element={<GeneralPublic/>}/>
+          <Route path='/corporateintel' element={<CorporateIntel/>}/>
           <Route path="/donate" element={<Donate />} />
           <Route path="/about/what-is-sahaayata" element={<WhatIsSahaayat />} />
           <Route path="/about/vision" element={<Vision />} />

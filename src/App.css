@@ -203,66 +203,6 @@ nav a{
     font-family: light;
 }
 
-/* Media Downloads */
-.downloads{
-    font-size: 24px;
-    color: #333333;
-    margin:8px 0px 0px 0px;
-    font-family: semibold;
-}
-.downloadtext{
-    color: #333333;
-    font-size: 14px;
-    font-family: light;
-}
-.downloadtitle{
-    font-size: 18px;
-    margin: 10px 0px;
-    color: #333333;
-    font-family: medium;
-}
-.pressimage{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.pressmail{
-    font-size: 24px;
-    font-family: regular;
-}
-.vardaansaa{
-    font-size: 18px;
-    font-family: Helvetica;
-}
-.vardaan{
-    font-size: 24px;
-    color: #333333;
-    margin:8px 0px 0px 0px;
-    font-family:Helvetica ;
-}
-.vardaantext{
-    color: #333333;
-    font-size: 14px;
-    font-family: Helvetica;
-}
-.vardaanforth{
-    font-size: 18px;
-    color: #6b0202;
-    font-family: Helvetica;
-    font-weight: bold;
-}
-.vardaansunday{
-    font-size: 18px;
-    font-family: Helvetica;
-    color: black;
-    font-weight: bold;
-}
-.vardaanentry{
-    font-size: 14px;
-    color: #6b0202;
-    font-family: Helvetica;
-    font-weight: bold;
-}
 
 
 

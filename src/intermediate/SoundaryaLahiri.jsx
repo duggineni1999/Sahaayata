@@ -5,6 +5,7 @@ import lalitha from '../Assets/Immediate/shri_alitha-tripura-sundari-on_a_throne
 function SoundaryaLahiri() {
   return (
     <div className='container'>
+        <iframe src="//www.youtube.com/embed/5fMV8jdPC7w" className="w-100 mt-5" style={{ height: '500px' }}></iframe>
 
     <Main title='Soundarya Lahari' 
     imageUrl={lalitha}

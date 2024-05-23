@@ -6,7 +6,7 @@ function SarvaDukha() {
   return (
     <div className='container'>
 
-      <Main title='Sarva Dukha Nivaarana Puja' 
+      <Main title='Sarva Dukha Nivaarana Puja'
       imageUrl={vinayaka}
        content="Suffering and humanity are simultaneous and a universal phenomenon. Rarely you find a human who has no suffering and who truly lives life. Suffering for the human begins in the womb and should be treated early in life. If not treated, it may still continue to the next birth!" />
       <p>Sahaayata helps one identify the 3 types of sufferings – Physical-Psychological-Spiritual : It helps some to become aware that we are suffering even without knowing it. It also reveals that there is a state without suffering which we have not yet lived. Sahaayata helps discover that phase of life which moves on from existing to living. The Psychological suffering which relates to the mind, influences our value systems, belief systems, emotions, feelings, perceptions, manifesting as psychosomatic behavioural patterns; The Physical suffering relates to the body and external world which is tangible, visible to the eyes and for everyone to see, hear and experience; The Spiritual suffering is virtually unknown to most people, even through one's entire lifetime. It comes in the form of fundamental questions. Only a blessing in the form of awareness can take us to acknowledge the presence of this suffering.</p>

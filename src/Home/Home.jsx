@@ -23,6 +23,7 @@ import prayer from '../Assets/Home/Prayer_candle.jpg'
 import vinayaka from '../Assets/Home/Sahaayata_Vinayaka_Archana.jpg'
 import meditation from '../Assets/Home/Centre_Front_Full_SW.jpg'
 import { Pagination } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 function Home() {
@@ -38,7 +39,7 @@ function Home() {
             </h2>
             <div className="row">
               <div className="col-12">
-                <img src={banner1} alt="" />
+                <img src={banner1} alt="" className='w-100' />
                 <p className="subContent">
                   Life has always been a mystery. There are so many questions which we come across and we do not have answers; so many incidents and we have no reasons; so many things and we do not understand why. Strange is the creation. We often wonder how this universe is so systematically organised and working. For example, for ages, the sun rises in the east and sets in the west. It never stopped rising. How are elephants communicating? How are the birds flying 18000 miles from Siberia to the Coromandel coast in South India and lay their eggs and fly back - the eggs hatch and the chicks fly back all the way to Siberia and where did they get the intelligence to go back to their homes. Who gave this intelligence. There are many more for which we do not have answers. To name that Supreme Intelligence, who is formless and can take a form when needed as GOD, the Almighty, the Creator, and the Creation.
                 </p>
@@ -238,13 +239,19 @@ function Home() {
               <div className="links">
                 <ol className="" style={{ lineHeight: '2rem' }}>
                   <li>
+                  <Link to='/about/parenting'>
                     <a href="">Sahaayata - For Parenting</a>
+                  </Link>
                   </li>
                   <li>
+                    <Link to='/projects'>
                     <a href="">Sahaayata Projects for the Needy</a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="">Prayer Request</a>
+                  <Link to='/prayerrequest'>
+                    <a href="">
+                      Prayer Request</a></Link>
                   </li>
                   <li>
                     <a href="">Sahaayata Vinayaka Archana Puja</a>

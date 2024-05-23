@@ -28,9 +28,11 @@ function Header() {
 
             <nav className="navbar shadow navbar-expand-lg bg-white sticky-top ">
                 <div className="container">
+                    <Link to='/'>
                     <a className="navbar-brand ">
                         <img src= {logo} alt="Logo" height="80px" />
                     </a>
+                    </Link>
 
                     <div className="collapse navbar-collapse bg-white px-3 " id="navbarText">
                         <ul className="navbar-nav position-relative mx-auto mb-2 mb-lg-0 gap-0 gap-xxl-3">
@@ -365,28 +367,28 @@ function Header() {
                                 </Link>
                                 <ul className="dropdown-menu  rounded-0 shadow border-0" style={{ backgroundColor: '#ffffffe7' }}>
                                     <li className="">
-                                        <Link to="/photo-gallery/first-program" className='text-decoration-none'>
+                                        <Link to="/sahaayatcenter" className='text-decoration-none'>
                                             <a className="dropdown-item text-black-50  lh-lg">
                                                 Sahaayat Center
                                             </a>
                                         </Link>
                                     </li>
                                     <li className="">
-                                        <Link to="/photo-gallery/rural" className='text-decoration-none'>
+                                        <Link to="/rural" className='text-decoration-none'>
                                             <a className="dropdown-item text-black-50 lh-lg" >
                                                Rural
                                             </a>
                                         </Link>
                                     </li>
                                     <li className="">
-                                        <Link to="/photo-gallery/general-public" className='text-decoration-none'>
+                                        <Link to="/generalpublic" className='text-decoration-none'>
                                             <a className="dropdown-item text-black-50  lh-lg" >
                                                 General Public
                                             </a>
                                         </Link>
                                     </li>
                                     <li className="">
-                                        <Link to="/photo-gallery/corporate-and-intelligentia" className='text-decoration-none'>
+                                        <Link to="/corporateintel" className='text-decoration-none'>
                                             <a className="dropdown-item text-black-50  lh-lg" >
                                             Corporate And Intelligentia
                                             </a>
