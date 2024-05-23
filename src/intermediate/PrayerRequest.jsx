@@ -1,5 +1,7 @@
 import React from 'react'
 import Main from './Main'
+import SocailMedia from '../Social Media/SocialMedia'
+import candle from '../Assets/Immediate/Prayer_candle.jpg'
 function PrayerRequest() {
   return (
     <div className='container'>

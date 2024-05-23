@@ -1,6 +1,7 @@
 import React from 'react'
 import Main from './Main'
 import center from '../Assets/Immediate/Centre_Front_Full_SW.jpg'
+import SocailMedia from '../Social Media/SocialMedia'
 function SahsayataPrayer() {
   return (
    

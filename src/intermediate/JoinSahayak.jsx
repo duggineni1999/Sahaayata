@@ -1,5 +1,7 @@
 import React from 'react'
 import Main from './Main'
+import SocailMedia from '../Social Media/SocialMedia'
+import shake from '../Assets/Immediate/shake_hands_real.jpg'
 function JoinSahayak() {
   return (
     

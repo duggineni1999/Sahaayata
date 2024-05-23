@@ -1,5 +1,7 @@
 import React from 'react'
 import Main from './Main'
+import SocailMedia from '../Social Media/SocialMedia'
+import youth from '../Assets/Immediate/Youth_Problems.jpg'
 function PersonalCounselling() {
   return (
   

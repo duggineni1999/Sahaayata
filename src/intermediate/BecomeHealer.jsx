@@ -1,5 +1,7 @@
 import React from 'react'
 import Main from './Main'
+import energy from '../Assets/Immediate/energy-hands.png'
+import SocailMedia from '../Social Media/SocialMedia'
 function BecomeHealer() {
     return (
 

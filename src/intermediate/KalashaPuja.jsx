@@ -1,5 +1,7 @@
 import React from 'react'
 import Main from './Main'
+import SocailMedia from '../Social Media/SocialMedia'
+import kalash from '../Assets/Immediate/Kalash.jpg'
 function KalashaPuja() {
   return (
     <div className='container'>

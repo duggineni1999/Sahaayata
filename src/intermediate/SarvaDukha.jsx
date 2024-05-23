@@ -1,5 +1,7 @@
 import React from 'react'
 import Main from './Main'
+import SocailMedia from '../Social Media/SocialMedia'
+import vinayaka from '../Assets/Immediate/Vinayaka_Haldi.jpg'
 function SarvaDukha() {
   return (
     <div className='container'>
@@ -17,7 +19,7 @@ function SarvaDukha() {
       </h4>
 
       <p>Sahaayata Prayer and Meditation Centre from 6 to 8 pm, every Thursday.</p>
-      <SocialMedia/>
+      <SocailMedia/>
     </div>
   )
 }

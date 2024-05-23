@@ -1,5 +1,7 @@
 import React from 'react'
 import Main from './Main'
+import SocailMedia from '../Social Media/SocialMedia'
+import chakra from '../Assets/Immediate/Chakra.png'
 function Chakradanya() {
     return (
         <div className='container'>

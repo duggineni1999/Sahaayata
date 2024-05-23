@@ -1,5 +1,7 @@
 import React from 'react'
 import Main from './Main'
+import SocailMedia from '../Social Media/SocialMedia'
+import pranic from '../Assets/Immediate/pranic_healing.jpg'
 function HealingRequest() {
   return (
     <div className='container'>
