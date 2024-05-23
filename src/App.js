@@ -35,6 +35,10 @@ import Corporates from "./About/Corporates";
 import Testimonials from "./About/Testimonials";
 import Srikiran from "./About/Faculty/Srikiran";
 import SriChakradhar from "./About/Faculty/SriChakradhar";
+import SahaayatCenter from './Gallery/SahaayatCenter';
+import Rural from './Gallery/Rural';
+import GeneralPublic from './Gallery/GeneralPublic';
+import CorporateIntel from './Gallery/CorporateIntel';
 
 
 const AboutPage = () => <div className="p-5">About Page</div>;
@@ -89,6 +93,10 @@ function App() {
           <Route path="/about/testimonials" element={<Testimonials />} />
           <Route path="/about/faculty/sri-kiran" element={<Srikiran />} />
           <Route path="/about/faculty/sri-chakradhar" element={<SriChakradhar />} />
+          <Route path="/photo-gallery/first-program" element={<SahaayatCenter />} />
+          <Route path="/photo-gallery/rural" element={<Rural />} />
+          <Route path="/photo-gallery/general-public" element={<GeneralPublic />} />
+          <Route path="/photo-gallery/corporate-and-intelligentia" element={<CorporateIntel />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/terms" element={<TermsUse />} />
           <Route path="/privacy" element={<Privacy />} />

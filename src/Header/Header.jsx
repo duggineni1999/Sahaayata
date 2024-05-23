@@ -357,40 +357,34 @@ function Header() {
                                 </Link>
                                 <ul className="dropdown-menu  rounded-0 shadow border-0" style={{ backgroundColor: '#ffffffe7' }}>
                                     <li className="">
-                                        <Link to="/NPI" className='text-decoration-none'>
+                                        <Link to="/photo-gallery/first-program" className='text-decoration-none'>
                                             <a className="dropdown-item text-black-50  lh-lg">
-                                                New Product Introduction
+                                                Sahaayat Center
                                             </a>
                                         </Link>
                                     </li>
                                     <li className="">
-                                        <Link to="/PCB" className='text-decoration-none'>
+                                        <Link to="/photo-gallery/rural" className='text-decoration-none'>
                                             <a className="dropdown-item text-black-50 lh-lg" >
-                                                PCB Assembly & Box Build
+                                               Rural
                                             </a>
                                         </Link>
                                     </li>
                                     <li className="">
-                                        <Link to="/EMF" className='text-decoration-none'>
+                                        <Link to="/photo-gallery/general-public" className='text-decoration-none'>
                                             <a className="dropdown-item text-black-50  lh-lg" >
-                                                Electronic Manufacturing
+                                                General Public
                                             </a>
                                         </Link>
                                     </li>
                                     <li className="">
-                                        <Link to="/ProductTesting" className='text-decoration-none'>
+                                        <Link to="/photo-gallery/corporate-and-intelligentia" className='text-decoration-none'>
                                             <a className="dropdown-item text-black-50  lh-lg" >
-                                                Product Testing
+                                            Corporate And Intelligentia
                                             </a>
                                         </Link>
                                     </li>
-                                    <li className="">
-                                        <Link to="AfterSales" className='text-decoration-none'>
-                                            <a className="dropdown-item text-black-50 lh-lg" >
-                                                After Sales & Warranty
-                                            </a>
-                                        </Link>
-                                    </li>
+                                    
                                 </ul>
                             </li>
 

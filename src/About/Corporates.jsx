@@ -98,12 +98,12 @@ function Corporates() {
         </div>
         <div className='d-flex  justify-content-end gap-3 mt-4'>
        <button className='btn border-0 personal_button mt-4 '>
-            <Link to="/courses/corporate-course" className="btn btn-default border-0">
+            <Link to="/courses/corporate-course" className="btn btn-default text-black border-0">
                 Personal Counselling and Guidance
             </Link>
         </button>
         <button className='btn border-0 personal_button mt-4 '>
-            <Link to="/photo-gallery/corporate-and-intelligentia" className="btn btn-default border-0">
+            <Link to="/photo-gallery/corporate-and-intelligentia" className="btn btn-default text-black border-0">
                Gallery
             </Link>
         </button>
