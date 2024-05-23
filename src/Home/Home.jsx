@@ -39,6 +39,64 @@ function Home() {
                 Read More ....
               </a>
             </button>
+
+   <OwlCarousel>
+            items={1}
+            loop
+            margin={10}
+            dots={true}
+            autoplay={true}
+            autoplayTimeout={5000}
+            autoplayHoverPause={true}
+            animateOut='fadeOut'
+
+
+            <div class='item'>
+              <img src={img1} alt="" />
+            </div>
+            <div class='item'>
+              <img src={img2} alt="" />
+            </div>
+            <div class='item'>
+              <img src={img3} alt="" />
+            </div>
+            <div class='item'>
+              <img src={img4} alt="" />
+            </div>
+            <div class='item'>
+              <img src={img5} alt="" />
+            </div>
+            <div class='item'>
+              <img src={img6} alt="" />
+            </div>
+            <div class='item'>
+              <img src={img7} alt="" />
+            </div>
+          </OwlCarousel>
+        </div>
+
+        <div className="container">
+          <h2 className='subHead py-5'>
+            Daily Arathi, Meditation, Prayer, Group Prayer & Healing
+          </h2>
+          <div className="row">
+            <div className="col-12">
+              <img src={banner1} alt="" />
+              <p className='subContent'>Life has always been a mystery. There are s
+                o many questions which we come across and we do not have answers; so many incidents
+                and we have no reasons; so many things and we do not understand why. Strange is the creation.  We often wonder how this universe is
+                so systematically organised and working.  For example, for ages, the sun rises in the east and sets in the west. It never stopped
+                rising. How are elephants communicating? How are the birds flying 18000 miles from Siberia to the Coromandel coast in South India
+                and lay their eggs and fly back - the eggs hatch and the chicks fly back all the way to Siberia and where did they get the
+                intelligence to go back to their homes. Who gave this intelligence. There are many more for which we do not have answers.
+                To name that Supreme Intelligence, who is formless and can take a form when needed as GOD, the Almighty, the Creator, and
+                the Creation. </p>
+
+              <button className='btn py-1 mb-5 px-4 shadow rounded-1' style={{  border: '.1px solid black' }}>
+                <a href="" className='text-capitalize fw-normal text-black fs-6' >Read More ....</a>
+              </button>
+
+            </div>
           </div>
         </div>
       </div>
@@ -242,6 +300,7 @@ function Home() {
           </ol>
         </div>
       </div>
+    </div>
     </div>
   );
 

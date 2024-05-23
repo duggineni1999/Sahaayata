@@ -25,7 +25,17 @@ import SahsayataPrayer from "./intermediate/SahsayataPrayer";
 import SarvaDukha from "./intermediate/SarvaDukha";
 import ShareExperience from "./intermediate/ShareExperience";
 import SoundaryaLahiri from "./intermediate/SoundaryaLahiri";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import WhatIsSahaayat from "./About/WhatIsSahaayat";
+import Vision from "./About/Vision";
+import PersonalProtal from "./About/PersonalProtal";
+import Parenting from "./About/Parenting";
+import ByDesign from "./About/ByDesign";
+import Schooling from "./About/Schooling";
+import Corporates from "./About/Corporates";
+import Testimonials from "./About/Testimonials";
+import Srikiran from "./About/Faculty/Srikiran";
+import SriChakradhar from "./About/Faculty/SriChakradhar";
+
 
 const AboutPage = () => <div className="p-5">About Page</div>;
 const ImmediatePage = () => <div className="p-5">Immediate Page</div>;
@@ -69,6 +79,16 @@ function App() {
           <Route path='/inauguration' element={<Inauguration/>}/>
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/donate" element={<DonatePage />} />
+          <Route path="/about/what-is-sahaayata" element={<WhatIsSahaayat />} />
+          <Route path="/about/vision" element={<Vision />} />
+          <Route path="/about/personal-portal" element={<PersonalProtal />} />
+          <Route path="/about/parenting" element={<Parenting />} />
+          <Route path="/about/by-design" element={<ByDesign />} />
+          <Route path="/about/schooling-and-child-management" element={<Schooling />} />
+          <Route path="/about/corporates" element={<Corporates />} />
+          <Route path="/about/testimonials" element={<Testimonials />} />
+          <Route path="/about/faculty/sri-kiran" element={<Srikiran />} />
+          <Route path="/about/faculty/sri-chakradhar" element={<SriChakradhar />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/terms" element={<TermsUse />} />
           <Route path="/privacy" element={<Privacy />} />
