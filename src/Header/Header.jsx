@@ -26,7 +26,7 @@ function Header() {
             </div>
 
 
-            <nav className="navbar navbar-expand-lg bg-white sticky-top ">
+            <nav className="navbar shadow navbar-expand-lg bg-white sticky-top ">
                 <div className="container">
                     <a className="navbar-brand ">
                         <img src= {logo} alt="Logo" height="80px" />
@@ -148,52 +148,17 @@ function Header() {
                                     </a>
                                 </Link>
                                 <ul className="dropdown-menu  rounded-0 shadow border-0" style={{ backgroundColor: '#ffffffe7' }}>
-                                    <li className="">
-                                        <Link to="/becomehealer" className='text-decoration-none'>
-                                            <a className="dropdown-item text-black-50  lh-lg">
-                                               Become Healer
-                                            </a>
-                                        </Link>
-                                    </li>
-                                    <li className="">
-                                        <Link to="/chakradanya" className='text-decoration-none'>
+                                <li className="">
+                                        <Link to="/sahsahayataprayer" className='text-decoration-none'>
                                             <a className="dropdown-item text-black-50 lh-lg" >
-                                            Chakradanya
+                                             SahayataPrayer and MeditationCenter
                                             </a>
                                         </Link>
                                     </li>
                                     <li className="">
-                                        <Link to="/divinemedicine" className='text-decoration-none'>
-                                            <a className="dropdown-item text-black-50  lh-lg" >
-                                            DivineMedicine
-                                            </a>
-                                        </Link>
-                                    </li>
-                                    <li className="">
-                                        <Link to="/healingrequest" className='text-decoration-none'>
-                                            <a className="dropdown-item text-black-50  lh-lg" >
-                                               HealingRequest
-                                            </a>
-                                        </Link>
-                                    </li>
-                                    <li className="">
-                                        <Link to="/joinsahayak" className='text-decoration-none'>
+                                        <Link to="/sarvadukha" className='text-decoration-none'>
                                             <a className="dropdown-item text-black-50 lh-lg" >
-                                               JoinSahayak
-                                            </a>
-                                        </Link>
-                                    </li>
-                                    <li className="">
-                                        <Link to="/kalashapuja" className='text-decoration-none'>
-                                            <a className="dropdown-item text-black-50 lh-lg" >
-                                               Kalashapuja
-                                            </a>
-                                        </Link>
-                                    </li>
-                                    <li className="">
-                                        <Link to="/personalcounselling" className='text-decoration-none'>
-                                            <a className="dropdown-item text-black-50 lh-lg" >
-                                            PersonalCounselling
+                                             SarvaDukha NivaranaPuja
                                             </a>
                                         </Link>
                                     </li>
@@ -205,33 +170,76 @@ function Header() {
                                         </Link>
                                     </li>
                                     <li className="">
-                                        <Link to="/sahsayataprayer" className='text-decoration-none'>
-                                            <a className="dropdown-item text-black-50 lh-lg" >
-                                             SahayataPrayer
+                                        <Link to="/healingrequest" className='text-decoration-none'>
+                                            <a className="dropdown-item text-black-50  lh-lg" >
+                                               Healing Request
                                             </a>
                                         </Link>
                                     </li>
                                     <li className="">
-                                        <Link to="/sarvadukha" className='text-decoration-none'>
-                                            <a className="dropdown-item text-black-50 lh-lg" >
-                                             SarvaDukha
+                                        <Link to="/divinemedicine" className='text-decoration-none'>
+                                            <a className="dropdown-item text-black-50  lh-lg" >
+                                            Create your own DivineMedicine
                                             </a>
                                         </Link>
                                     </li>
                                     <li className="">
-                                        <Link to="/shareexperience" className='text-decoration-none'>
+                                        <Link to="/personalcounselling" className='text-decoration-none'>
                                             <a className="dropdown-item text-black-50 lh-lg" >
-                                               ShareExperience
+                                            PersonalCounselling and Guidance
+                                            </a>
+                                        </Link>
+                                    </li>
+                                    <li className="">
+                                        <Link to="/chakradanya" className='text-decoration-none'>
+                                            <a className="dropdown-item text-black-50 lh-lg" >
+                                            Chakra danya
+                                            </a>
+                                        </Link>
+                                    </li>
+                                    <li className="">
+                                        <Link to="/kalashapuja" className='text-decoration-none'>
+                                            <a className="dropdown-item text-black-50 lh-lg" >
+                                               Kalasha puja
+                                            </a>
+                                        </Link>
+                                    </li>
+                                    <li className="">
+                                        <Link to="/becomehealer" className='text-decoration-none'>
+                                            <a className="dropdown-item text-black-50  lh-lg">
+                                              Become a healer yourself
                                             </a>
                                         </Link>
                                     </li>
                                     <li className="">
                                         <Link to="/soundaryalahiri" className='text-decoration-none'>
                                             <a className="dropdown-item text-black-50 lh-lg" >
-                                             SoundaryaLahiri
+                                             Soundarya Lahiri
                                             </a>
                                         </Link>
                                     </li>
+                                    <li className="">
+                                        <Link to="/shareexperience" className='text-decoration-none'>
+                                            <a className="dropdown-item text-black-50 lh-lg" >
+                                               Share yourExperience
+                                            </a>
+                                        </Link>
+                                    </li>
+                                  
+                                   
+                                  
+                                    <li className="">
+                                        <Link to="/joinsahayak" className='text-decoration-none'>
+                                            <a className="dropdown-item text-black-50 lh-lg" >
+                                               Join us as a Sahayak
+                                            </a>
+                                        </Link>
+                                    </li>
+                                  
+                                  
+                                   
+                                    
+                                 
                                 </ul>
                             </li>
 
@@ -357,40 +365,34 @@ function Header() {
                                 </Link>
                                 <ul className="dropdown-menu  rounded-0 shadow border-0" style={{ backgroundColor: '#ffffffe7' }}>
                                     <li className="">
-                                        <Link to="/NPI" className='text-decoration-none'>
+                                        <Link to="/photo-gallery/first-program" className='text-decoration-none'>
                                             <a className="dropdown-item text-black-50  lh-lg">
-                                                New Product Introduction
+                                                Sahaayat Center
                                             </a>
                                         </Link>
                                     </li>
                                     <li className="">
-                                        <Link to="/PCB" className='text-decoration-none'>
+                                        <Link to="/photo-gallery/rural" className='text-decoration-none'>
                                             <a className="dropdown-item text-black-50 lh-lg" >
-                                                PCB Assembly & Box Build
+                                               Rural
                                             </a>
                                         </Link>
                                     </li>
                                     <li className="">
-                                        <Link to="/EMF" className='text-decoration-none'>
+                                        <Link to="/photo-gallery/general-public" className='text-decoration-none'>
                                             <a className="dropdown-item text-black-50  lh-lg" >
-                                                Electronic Manufacturing
+                                                General Public
                                             </a>
                                         </Link>
                                     </li>
                                     <li className="">
-                                        <Link to="/ProductTesting" className='text-decoration-none'>
+                                        <Link to="/photo-gallery/corporate-and-intelligentia" className='text-decoration-none'>
                                             <a className="dropdown-item text-black-50  lh-lg" >
-                                                Product Testing
+                                            Corporate And Intelligentia
                                             </a>
                                         </Link>
                                     </li>
-                                    <li className="">
-                                        <Link to="AfterSales" className='text-decoration-none'>
-                                            <a className="dropdown-item text-black-50 lh-lg" >
-                                                After Sales & Warranty
-                                            </a>
-                                        </Link>
-                                    </li>
+                                    
                                 </ul>
                             </li>
 

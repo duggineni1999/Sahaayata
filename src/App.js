@@ -22,7 +22,7 @@ import JoinSahayak from "./intermediate/JoinSahayak";
 import KalashaPuja from "./intermediate/KalashaPuja";
 import PersonalCounselling from "./intermediate/PersonalCounselling";
 import PrayerRequest from "./intermediate/PrayerRequest";
-import SahsayataPrayer from "./intermediate/SahsayataPrayer";
+import SahsayataPrayer from './intermediate/SahsayataPrayer';
 import SarvaDukha from "./intermediate/SarvaDukha";
 import ShareExperience from "./intermediate/ShareExperience";
 import SoundaryaLahiri from "./intermediate/SoundaryaLahiri";

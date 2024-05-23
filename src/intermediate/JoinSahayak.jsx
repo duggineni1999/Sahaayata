@@ -1,13 +1,12 @@
 import React from 'react'
 import Main from './Main'
-import SocailMedia from '../Social Media/SocialMedia'
 function JoinSahayak() {
   return (
     
     <div className='container'>
 
     <Main title='Join us as a Sahaayak' 
-    imageUrl="shake_hands_real.jpg"
+    imageUrl={shake}
      content="Sahaayata encourages one and all to wholeheartedly associate with the Sahaayata Society and lend their talent, skills, knowledge, contacts to further the mission of the Sahaayata and in turn the humanitarian efforts.
 
 Your contribution in this area will help you in earning a tremendous amount of Satkarma and inner fulfillment not only for you as an individual but will also serve as an exemplary demonstration of productive social contribution.

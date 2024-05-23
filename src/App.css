@@ -55,6 +55,20 @@ nav  .fa i:hover{
     color: white;
 }
 
+.member{
+    opacity: 0;
+    width: 200px;
+    top:0;
+     left:0;
+     right:0;
+     margin-left:210px
+  }
+  
+  .faculty:hover .member {
+    opacity: 1;
+  }
+  
+
 
 
 /* .App{
@@ -134,6 +148,123 @@ nav a{
  
 }
 
+ /* Terms of use  */
+.terms{
+    font-size: 24px;
+    color: #333333;
+    margin:8px 0px 0px 0px;
+}
+.termsacceptance{
+    font-size: 18px;
+    margin:30px 0px 10px 0px;
+    font-family: medium;
+    color: #333333;
+}
+.termsparagraph{
+    font-size: 14px;
+    margin: 15px 0px;
+    font-family: light;
+    color: #333333;
+}
+.termslast{
+    font-size: 14px;
+    margin: 25px 0px;
+    color: #333333;
+    font-family: light;
+}
+/* Privacy Policy  */
+.privacy{
+    font-size: 24px;
+    color: #333333;
+    margin:8px 0px 0px 0px;
+}
+.privacyintro{
+    font-size: 18px;
+    margin:30px 0px 10px 0px;
+    color: #333333;
+    font-family: medium;
+}
+.privacyenter{
+    font-size: 14px;
+    margin: 15px 0px;
+    color: #333333;
+    font-family: light;
+}
+.privacylegal{
+    font-size: 13px;
+    margin:30px 0px 10px 0px;
+    color: #333333;
+    font-family: medium;
+}
+.privacylast{
+    font-size: 14px;
+    margin: 25px 0px;
+    color: #333333;
+    font-family: light;
+}
+
+/* Media Downloads */
+.downloads{
+    font-size: 24px;
+    color: #333333;
+    margin:8px 0px 0px 0px;
+    font-family: semibold;
+}
+.downloadtext{
+    color: #333333;
+    font-size: 14px;
+    font-family: light;
+}
+.downloadtitle{
+    font-size: 18px;
+    margin: 10px 0px;
+    color: #333333;
+    font-family: medium;
+}
+.pressimage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pressmail{
+    font-size: 24px;
+    font-family: regular;
+}
+.vardaansaa{
+    font-size: 18px;
+    font-family: Helvetica;
+}
+.vardaan{
+    font-size: 24px;
+    color: #333333;
+    margin:8px 0px 0px 0px;
+    font-family:Helvetica ;
+}
+.vardaantext{
+    color: #333333;
+    font-size: 14px;
+    font-family: Helvetica;
+}
+.vardaanforth{
+    font-size: 18px;
+    color: #6b0202;
+    font-family: Helvetica;
+    font-weight: bold;
+}
+.vardaansunday{
+    font-size: 18px;
+    font-family: Helvetica;
+    color: black;
+    font-weight: bold;
+}
+.vardaanentry{
+    font-size: 14px;
+    color: #6b0202;
+    font-family: Helvetica;
+    font-weight: bold;
+}
+
+
 
 
 p{
@@ -141,12 +272,12 @@ p{
   text-align: justify;
 }
 .members{
-  opacity: 0;
-  width: 300px;
-  top:0;
-   left:0;
-   right:0;
-   margin-left:310px
+    opacity: 0;
+    width: 300px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: 310px
 }
 
 .faculty:hover .members {
