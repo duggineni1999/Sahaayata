@@ -25,6 +25,7 @@ import SahsayataPrayer from "./intermediate/SahsayataPrayer";
 import SarvaDukha from "./intermediate/SarvaDukha";
 import ShareExperience from "./intermediate/ShareExperience";
 import SoundaryaLahiri from "./intermediate/SoundaryaLahiri";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const AboutPage = () => <div className="p-5">About Page</div>;
 const ImmediatePage = () => <div className="p-5">Immediate Page</div>;
