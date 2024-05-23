@@ -1,5 +1,6 @@
 import React from 'react'
 import Main from './Main'
+import SocailMedia from '../Social Media/SocialMedia'
 import chakra from '../Assets/Immediate/Chakra.png'
 function Chakradanya() {
     return (
@@ -21,9 +22,10 @@ function Chakradanya() {
 <p>After the above practice, while inhaling, look at the bright golden liquid flowing through the chakras, contain the breathing softly as it flows through the crown chakra, then watch it while exhaling, shooting out from the head, like a fountain, pouring through the entire body turning bright gold.</p>
 <p>Continue with this breathing practice for seven breaths. After practicing this meditation technique, lie down immediately on your back still and relax for a few minutes or as long as you need in the yogic body position of 'Shavasana" (eyes closed, lying on the back with arms at the sides, and palms facing upwards, with legs parted slightly). Let yourself go and immerse yourself enjoying being that way. Experience the dynamics of the flow of energy in the body with the flow of the Kundalini energy. Relax and rejuvenate entirely after this practice.</p>
 
-<a href='CHAKRA_DHYANA.pdf' className='btn btn-danger mb-4'>Download</a>
+<a href='#' className='btn btn-danger mt-3 float-end'>Book Now</a>
+<a href='CHAKRA_DHYANA.pdf' className='btn btn-danger mt-4 '>Download</a>
             </div>
-
+        <SocailMedia/>
         </div>
     )
 }

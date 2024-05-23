@@ -8,6 +8,7 @@ import Introduction from './Media/Introduction';
 import Launch from './Media/Launch';
 import Vardaan from './Media/Vardaan';
 import Inauguration from './Media/Inauguration';
+import Donate from './Donate/Donate';
 import TermsUse from "./Footer/TermsUse";
 import Privacy from './Footer/Privacy';
 import Refund from './Footer/Refund';
@@ -35,10 +36,18 @@ import Corporates from "./About/Corporates";
 import Testimonials from "./About/Testimonials";
 import Srikiran from "./About/Faculty/Srikiran";
 import SriChakradhar from "./About/Faculty/SriChakradhar";
+
 import ContactUs from './Contact/ContactUs';
 import Register from './Forms/Register';
 import ArchanaPuja from './Home/ArchanaPuja';
 import LogIn from './Forms/LogIn';
+
+import Projects from './Home/Projects';
+import SahaayatCenter from './Gallery/SahaayatCenter';
+import CorporateIntel from './Gallery/CorporateIntel';
+import GeneralPublic from './Gallery/GeneralPublic';
+import Rural from './Gallery/Rural'
+
 
 const AboutPage = () => <div className="p-5">About Page</div>;
 const ImmediatePage = () => <div className="p-5">Immediate Page</div>;
@@ -58,7 +67,11 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
+
           <Route path="/archana" element={<ArchanaPuja />} />
+
+          <Route path='/projects' element={<Projects/>}/>
+
           <Route path="/about" element={<AboutPage />} />
           <Route path="/immediate" element={<ImmediatePage />} />
           <Route path="/becomehealer" element={<BecomeHealer />} />
@@ -82,7 +95,11 @@ function App() {
           <Route path='/vardaan' element={<Vardaan/>}/>
           <Route path='/inauguration' element={<Inauguration/>}/>
           <Route path="/gallery" element={<GalleryPage />} />
-          <Route path="/donate" element={<DonatePage />} />
+          <Route path='/sahaayatcenter' element={<SahaayatCenter/>}/>
+          <Route path='/rural' element={<Rural/>}/>
+          <Route path='/generalpublic' element={<GeneralPublic/>}/>
+          <Route path='/corporateintel' element={<CorporateIntel/>}/>
+          <Route path="/donate" element={<Donate />} />
           <Route path="/about/what-is-sahaayata" element={<WhatIsSahaayat />} />
           <Route path="/about/vision" element={<Vision />} />
           <Route path="/about/personal-portal" element={<PersonalProtal />} />

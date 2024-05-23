@@ -1,40 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Mukta:wght@300&family=Oswald:wght@700&family=Poppins:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@600&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@500&display=swap');
-@font-face{
-    font-family: "bold";
-    src: url("../public/opensas/static/OpenSans-Bold.ttf") format("truetype");
-}
-@font-face{
-    font-family: "extrabold";
-    src: url("../public/opensas/static/OpenSans-ExtraBold.ttf") format("truetype");
-}
-@font-face{
-    font-family: "light";
-    src: url("../public/opensas/static/OpenSans-Light.ttf") format("truetype");
-}
-@font-face{
-    font-family: "medium";
-    src: url("../public/opensas/static/OpenSans-Medium.ttf") format("truetype");
-}
-@font-face{
-    font-family: "semibold";
-    src: url("../public/opensas/static/OpenSans-SemiBold.ttf") format("truetype");
-}
-@font-face{
-    font-family: "regular";
-    src: url("../public/opensas/static/OpenSans-Regular.ttf") format("truetype");
-}
-@font-face{
-    font-family: "mediumitalic";
-    src: url("../public/opensas/static/OpenSans-MediumItalic.ttf") format("truetype");
-}
-@font-face{
-    font-family: "lightitalic";
-    src: url("../public/opensas/static/OpenSans-LightItalic.ttf") format("truetype");
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:wght@300;500&display=swap');
 
@@ -253,70 +217,7 @@ nav a{
     font-family: light;
 }
 
-/* Media Downloads */
-.downloads{
-    font-size: 24px;
-    color: #333333;
-    margin:8px 0px 0px 0px;
-    font-family: semibold;
-}
-.downloadtext{
-    color: #333333;
-    font-size: 14px;
-    font-family: light;
-}
-.downloadtitle{
-    font-size: 18px;
-    margin: 10px 0px;
-    color: #333333;
-    font-family: medium;
-}
-.pressimage{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.pressmail{
-    font-size: 24px;
-    font-family: regular;
-}
-.vardaansaa{
-    font-size: 18px;
-    font-family: Helvetica;
-}
-.vardaan{
-    font-size: 24px;
-    color: #333333;
-    margin:8px 0px 0px 0px;
-    font-family:Helvetica ;
-}
-.vardaantext{
-    color: #333333;
-    font-size: 14px;
-    font-family: Helvetica;
-}
-.vardaanforth{
-    font-size: 18px;
-    color: #6b0202;
-    font-family: Helvetica;
-    font-weight: bold;
-}
-.vardaansunday{
-    font-size: 18px;
-    font-family: Helvetica;
-    color: black;
-    font-weight: bold;
-}
-.vardaanentry{
-    font-size: 14px;
-    color: #6b0202;
-    font-family: Helvetica;
-    font-weight: bold;
-}
 
-a{
-    text-decoration: none !important;
-}
 
 
 
@@ -340,3 +241,19 @@ p{
 .faculty:hover .fweicon {
   color: white !important;
 }
+.member{
+    opacity: 0;
+    width: 200px;
+    top:0;
+     left:0;
+     right:0;
+     margin-left:210px
+  }
+  
+  .faculty:hover .member {
+    opacity: 1;
+  }
+  
+  
+ 
+  

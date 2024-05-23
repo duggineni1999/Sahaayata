@@ -1,5 +1,5 @@
 import React from 'react'
-
+import SocailMedia from '../Social Media/SocialMedia'
 function Refund() {
   return (
     <div className='container'>
@@ -8,7 +8,7 @@ function Refund() {
         <li className=''>
           <p>Amount once paid through the payment gateway shall not be refunded other than in the following circumstances:</p>
         </li>
-        <ul>
+        <ul style={{listStyleType:'disc'}}>
           <li>
             Multiple times debiting of Customer’s Card/Bank Account due to technical error OR Customer's account being debited with excess amount in a single transaction due to technical error. In such cases, excess amount excluding Payment Gateway charges would be refunded to the Customer.
           </li>
@@ -22,7 +22,7 @@ function Refund() {
         <li className='py-1'>The application in the prescribed format should be sent to www.sahaayata.org</li>
         <li className='py-1'>The application will be processed manually and after verification, if the claim is found valid, the amount received in excess will be refunded by NISM through electronic mode in favor of the applicant and confirmation sent to the mailing address given in the online registration form, within a period of 21 calendar days on receipt of such claim. It will take 3‐21 days for the money to show in your bank account depending on your bank’s policy.</li>
         <li className='py-1'>Organisation assumes no responsibility and shall incur no liability if it is unable to affect any Payment Instruction(s) on the Payment Date owing to any one or more of the following circumstances:</li>
-        <ul>
+        <ul style={{listStyleType:'disc'}}>
           <li>
           If the Payment Instruction(s) issued by you is/are incomplete, inaccurate, and invalid and delayed.
           </li>
@@ -41,6 +41,7 @@ function Refund() {
  
         </li>
       </ol>
+      <SocailMedia/>
     </div>
   )
 }

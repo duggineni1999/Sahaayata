@@ -10,8 +10,9 @@ function Main({ title, imageUrl, content }) {
 <div className='py-4  '>
         {content}
         </div>
+
       </div>
-   
+
   );
 }
 
