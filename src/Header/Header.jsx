@@ -1,11 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../Assets/logo-medium.png'
+import { jwtDecode } from 'jwt-decode';
+import logo from '../Assets/logo-medium.png';
+
 
 function Header() {
     
+    const [token, setToken] = useState(null);
+
+    useEffect(() => {
+      const accessToken = localStorage.getItem('token');
+      if (accessToken) {
+        setToken(accessToken);
+        try {
+          const decodedToken = jwtDecode(accessToken);
+          console.log('Decoded Token:', decodedToken);
+        } catch (error) {
+          console.error('Invalid token:', error);
+        }
+      }
+    }, []);
+    
     return (
         <div>
+            
             <div className='header_top'>
                 <div className='container'>
                     <div className='d-flex justify-content-end'>
