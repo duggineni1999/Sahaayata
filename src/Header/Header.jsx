@@ -416,9 +416,9 @@ function Header() {
                             </li>
 
                         </ul>
-                        <div className='rounded-5 profile'>
-                            <Link to='/register'>
-                            <i class="fa-regular fa-user fs-5"></i>
+                        <div className=''>
+                            <Link to='/login'>
+                                <button className='btn footerbg'>LogIn</button>
                             </Link>
                         </div>
 

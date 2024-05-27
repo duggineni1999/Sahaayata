@@ -1,7 +1,7 @@
-// src/RegistrationForm.jsx
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Forms.css'; // Import CSS for additional styling
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import './Forms.css';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -20,21 +20,35 @@ const Register = () => {
 
   const validate = () => {
     const errors = {};
+    const emailPattern = /^[a-z0-9._%+-]+@(gmail|yahoo)\.com$/;
+    const passwordPattern = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&]{4,}$/;
+
     if (!formData.username) errors.username = 'Username is required';
-    if (!formData.email) errors.email = 'Email is required';
-    if (!formData.password) errors.password = 'Password is required';
-    if (formData.password !== formData.confirmPassword)
+    if (!formData.email) {
+      errors.email = 'Email is required';
+    } else if (!emailPattern.test(formData.email)) {
+      errors.email = 'Email must be a valid @gmail.com or @yahoo.com address';
+    }
+    if (!formData.password) {
+      errors.password = 'Password is required';
+    } else if (!passwordPattern.test(formData.password)) {
+      errors.password = 'Password must be at least 4 characters long, contain one uppercase letter, one number, and one special character';
+    }
+    if (formData.password !== formData.confirmPassword) {
       errors.confirmPassword = 'Passwords do not match';
+    }
     return errors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
+      toast.error('Please fix the errors in the form');
     } else {
       console.log('Form submitted:', formData);
+      toast.success('Registration successful!');
       setFormData({
         username: '',
         email: '',
@@ -42,6 +56,18 @@ const Register = () => {
         confirmPassword: ''
       });
       setErrors({});
+      try {
+        const response = await fetch("http://192.168.5.56:8089/register", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(formData)
+        });
+        
+      } catch (error) {
+        toast.error(error.message);
+      }
     }
   };
 
@@ -56,7 +82,7 @@ const Register = () => {
             value={formData.username}
             onChange={handleChange}
           />
-          {errors.username && <span>{errors.username}</span>}
+          {errors.username && <span className='text-danger errormsg'>{errors.username}</span>}
         </div>
         <div className="form-group">
           <label>Email:</label><br />
@@ -66,7 +92,7 @@ const Register = () => {
             value={formData.email}
             onChange={handleChange}
           />
-          {errors.email && <span>{errors.email}</span>}
+          {errors.email && <span className='text-danger errormsg'>{errors.email}</span>}
         </div>
         <div className="form-group">
           <label>Password:</label><br />
@@ -76,7 +102,7 @@ const Register = () => {
             value={formData.password}
             onChange={handleChange}
           />
-          {errors.password && <span>{errors.password}</span>}
+          {errors.password && <span className='text-danger errormsg'>{errors.password}</span>}
         </div>
         <div className="form-group">
           <label>Confirm Password:</label><br />
@@ -86,11 +112,11 @@ const Register = () => {
             value={formData.confirmPassword}
             onChange={handleChange}
           />
-          {errors.confirmPassword && <span>{errors.confirmPassword}</span>}
+          {errors.confirmPassword && <span className='text-danger errormsg'>{errors.confirmPassword}</span>}
         </div>
-        <button type="submit" className="btn  formbtn btn-primary">Register</button>
-        <Link to='/login' className="btn formbtn  btn-secondary">Go to Login</Link>
+        <button type="submit" className="btn formbtn btn-primary mt-4">Register</button>
       </form>
+      <ToastContainer />
     </div>
   );
 };

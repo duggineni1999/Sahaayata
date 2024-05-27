@@ -28,7 +28,7 @@ const Login = () => {
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
     } else {
-     
+      console.log('Form submitted:', formData);
       setFormData({
         email: '',
         password: ''
@@ -58,10 +58,15 @@ const Login = () => {
             value={formData.password}
             onChange={handleChange}
           />
-          {errors.password && <span>{errors.password}</span>}
+          {errors.password && <span className='text-danger errormsg'>{errors.password}</span>}
         </div>
-        <button type="submit" className="btn formbtn btn-primary">Login</button>
-        <Link to='/register' className="btn formbtn btn-secondary">Go to Register</Link>
+        <button type="submit" className="btn formbtn btn-primary mt-3">Login</button>
+        <div className='d-flex mt-3 gap-1'>
+        <p className='notregister'>Not Registered?</p>
+        <Link to='/register'>
+          <a href='#' className="notregisterd">Create an Account</a>
+        </Link>
+        </div>
       </form>
     </div>
   );
