@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
+import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { loginSuccess } from '../authSlice';
 
 const Login = () => {
   const navigate = useNavigate();
+    const dispatch = useDispatch();
   const [userDetails, setUserDetails] = useState({
     username: '',
     password: '',
@@ -22,27 +25,34 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    try {
-      const response = await axios.post('http://192.168.5.56:8089/login', userDetails);
-      if (response.data.success) {
-        toast.success(response.data.message);
-        localStorage.setItem('token', response.data.token);
-        navigate("/");
+    if (!userDetails.email || !userDetails.password) {
+      toast.warning('Please fill out all fields');
+      return;
+    }
+    else{
+      try {
+        const response = await axios.post('http://192.168.5.34:8000/login', userDetails, {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+  
+        dispatch(loginSuccess(response.data.accessToken)); 
+        localStorage.setItem('token', response.data.accessToken);
+        navigate('/');
+  
         // Resetting form values
         setUserDetails({
           email: '',
           password: '',
         });
-        
-        // Redirect to a protected route
-      } else {
-        toast.error(response.data.message);
+      } catch (error) {
+        toast.error('Invalid Credentials');
+        console.error('Error:', error);
       }
-    } catch (error) {
-      console.error('Error logging in:', error);
-      toast.error('An error occurred. Please try again later.');
+
     }
+
   };
 
   return (
@@ -79,7 +89,23 @@ const Login = () => {
                 />
               </Form.Group>
 
+
               <div className='d-flex justify-content-center'>
+            <Form.Group controlId="formPassword">
+              <Form.Label>Password</Form.Label>
+              <Form.Control
+                type="text"
+                className='mb-3'
+                name="password"
+                value={userDetails.password}
+                onChange={handleChange}
+                placeholder="Password"
+              />
+            </Form.Group>
+            </div>
+
+            <div className='d-flex justify-content-center'>
+
                 <Button className='w-50 mt-3' variant="primary" type="submit">
                   Login
                 </Button>
