@@ -47,16 +47,9 @@ import SahaayatCenter from './Gallery/SahaayatCenter';
 import CorporateIntel from './Gallery/CorporateIntel';
 import GeneralPublic from './Gallery/GeneralPublic';
 import Rural from './Gallery/Rural'
-import SocialLinks from './Social Media/SocialMedia';
+import Login from './UserPortal/Login';
+import Registration from './UserPortal/Registration';
 
-
-const AboutPage = () => <div className="p-5">About Page</div>;
-const ImmediatePage = () => <div className="p-5">Immediate Page</div>;
-const WorkshopsPage = () => <div className="p-5">Workshops Page</div>;
-const MediaPage = () => <div className="p-5">Media Page</div>;
-const GalleryPage = () => <div className="p-5">Gallery Page</div>;
-const DonatePage = () => <div className="p-5">Donate Page</div>;
-const ContactPage = () => <div className="p-5">Contact Page</div>;
 
 
 function App() {
@@ -73,8 +66,6 @@ function App() {
 
           <Route path='/projects' element={<Projects/>}/>
 
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/immediate" element={<ImmediatePage />} />
           <Route path="/becomehealer" element={<BecomeHealer />} />
           <Route path="/chakradanya" element={<Chakradanya />} />
           <Route path="/divinemedicine" element={<DivineMedicine/>} />
@@ -88,14 +79,14 @@ function App() {
           <Route path="/sarvadukha" element={<SarvaDukha/>} />
           <Route path="/shareexperience" element={<ShareExperience />} />
           <Route path="/soundaryalahiri" element={<SoundaryaLahiri />} />
-          <Route path="/workshops" element={<WorkshopsPage />} />
-          <Route path="/media" element={<MediaPage />} />
+       
+       
           <Route path='/downloads' element={<Downloads/>}/>
           <Route path='/introduction' element={<Introduction/>}/>
           <Route path='/launch' element={<Launch/>}/>
           <Route path='/vardaan' element={<Vardaan/>}/>
           <Route path='/inauguration' element={<Inauguration/>}/>
-          <Route path="/gallery" element={<GalleryPage />} />
+      
           <Route path='/sahaayatcenter' element={<SahaayatCenter/>}/>
           <Route path='/rural' element={<Rural/>}/>
           <Route path='/generalpublic' element={<GeneralPublic/>}/>
@@ -112,6 +103,12 @@ function App() {
           <Route path="/about/faculty/sri-kiran" element={<Srikiran />} />
           <Route path="/about/faculty/sri-chakradhar" element={<SriChakradhar />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/photo-gallery/first-program" element={<SahaayatCenter />} />
+          <Route path="/photo-gallery/rural" element={<Rural />} />
+          <Route path="/photo-gallery/general-public" element={<GeneralPublic />} />
+          <Route path="/photo-gallery/corporate-and-intelligentia" element={<CorporateIntel />} />
+          <Route path="/user-login" element={<Login />} />
+          <Route path="/user-registration" element={<Registration />} />
           <Route path="/terms" element={<TermsUse />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/cookie" element={<Cookie/>} />
