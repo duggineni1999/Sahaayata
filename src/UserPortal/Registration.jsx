@@ -31,7 +31,7 @@ const Registration = () => {
     }
 
     try {
-      const response = await axios.post('http://192.168.5.56:8089/register', userDetails);
+      const response = await axios.post('http://192.168.5.34:8000/login', userDetails);
       if (response.data.success) {
         toast.success(response.data.message);
         setUserDetails({

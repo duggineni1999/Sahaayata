@@ -49,6 +49,7 @@ import GeneralPublic from './Gallery/GeneralPublic';
 import Rural from './Gallery/Rural'
 import Login from './UserPortal/Login';
 import Registration from './UserPortal/Registration';
+import AdminProtal from './Admin/AdminProtal';
 
 
 
@@ -115,6 +116,7 @@ function App() {
           <Route path="/refund" element={<Refund />} />
           <Route path='/login' element={<LogIn/>}/>
           <Route path='/register' element={<Register/>}/>
+          <Route path='/admin-portal' element={<AdminProtal />}/>
         </Routes>
        
         <Footer />

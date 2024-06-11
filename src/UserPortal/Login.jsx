@@ -11,7 +11,7 @@ const Login = () => {
   const navigate = useNavigate();
     const dispatch = useDispatch();
   const [userDetails, setUserDetails] = useState({
-    username: '',
+    email: '',
     password: '',
   });
 
@@ -63,15 +63,15 @@ const Login = () => {
             <h2>User Login</h2>
             <Form className='mt-5' onSubmit={handleSubmit}>
               <ToastContainer />
-              <Form.Group controlId="formUsername">
-                <Form.Label>Username</Form.Label>
+              <Form.Group controlId="formemail">
+                <Form.Label>email</Form.Label>
                 <Form.Control
                   type="text"
                   className='mb-3'
-                  name="username"
-                  value={userDetails.username}
+                  name="email"
+                  value={userDetails.email}
                   onChange={handleChange}
-                  placeholder="Enter username"
+                  placeholder="Enter email"
                   required
                 />
               </Form.Group>
@@ -90,19 +90,7 @@ const Login = () => {
               </Form.Group>
 
 
-              <div className='d-flex justify-content-center'>
-            <Form.Group controlId="formPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                type="text"
-                className='mb-3'
-                name="password"
-                value={userDetails.password}
-                onChange={handleChange}
-                placeholder="Password"
-              />
-            </Form.Group>
-            </div>
+           
 
             <div className='d-flex justify-content-center'>
 

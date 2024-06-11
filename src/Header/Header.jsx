@@ -288,44 +288,77 @@ function Header() {
                                     </Link>
                                     <ul className="dropdown-menu  rounded-0 shadow border-0" style={{ backgroundColor: '#ffffffe7' }}>
                                         <li className="">
-                                            <Link to="/NPI" className='text-decoration-none'>
+                                            <Link to="/courses/anubhava-workshop" className='text-decoration-none'>
                                                 <a className="dropdown-item text-black-50  lh-lg">
-                                                    New Product Introduction
+                                                    Anubhava Workshop
                                                 </a>
                                             </Link>
                                         </li>
                                         <li className="">
-                                            <Link to="/PCB" className='text-decoration-none'>
+                                            <Link to="/courses/corporate-workshop" className='text-decoration-none'>
                                                 <a className="dropdown-item text-black-50 lh-lg" >
-                                                    PCB Assembly & Box Build
+                                                    Corporate Workshop
                                                 </a>
                                             </Link>
                                         </li>
                                         <li className="">
-                                            <Link to="/EMF" className='text-decoration-none'>
+                                            <Link to="/courses/vardaan-workshop" className='text-decoration-none'>
                                                 <a className="dropdown-item text-black-50  lh-lg" >
-                                                    Electronic Manufacturing
+                                                    Vardaan Workshop
                                                 </a>
                                             </Link>
                                         </li>
                                         <li className="">
-                                            <Link to="/ProductTesting" className='text-decoration-none'>
+                                            <Link to="/courses/sahaayata-workshop" className='text-decoration-none'>
                                                 <a className="dropdown-item text-black-50  lh-lg" >
-                                                    Product Testing
+                                                    Sahaayata Workshop
                                                 </a>
                                             </Link>
                                         </li>
                                         <li className="">
-                                            <Link to="AfterSales" className='text-decoration-none'>
+                                            <Link to="/courses/shloka-chanting-courses" className='text-decoration-none'>
                                                 <a className="dropdown-item text-black-50 lh-lg" >
-                                                    After Sales & Warranty
+                                                    Shloka Chanting Courses
+                                                </a>
+                                            </Link>
+                                        </li>
+                                        <li className="">
+                                            <Link to="/courses/shloka-chanting-courses" className='text-decoration-none'>
+                                                <a className="dropdown-item text-black-50 lh-lg" >
+                                                    Shloka Chanting Courses
+                                                </a>
+                                            </Link>
+                                        </li>
+                                        <li className=" position-relative faculty">
+                                            <Link to="/" className='text-decoration-none'>
+                                                <a className="dropdown-item  text-black-50 lh-lg d-flex justify-content-between" >
+                                                    Youth Excellence Workshop {''}
+                                                    <span>
+                                                        <i className="fa fa-angle-left ms-1 drop-icon fw-bold fweicon" data-bs-toggle="dropdown" style={{ color: '#5AADDD', }} aria-hidden="true"></i>
+                                                    </span>
+                                                </a>
+                                            </Link>
+                                            <ul className="dropdown-menu px-1 position-absolute  rounded-0 members1 shadow border-0" style={{ backgroundColor: '#ffffffe7' }}>
+                                                <li className="">
+                                                    <Link to="/about/faculty/sri-kiran" className='text-decoration-none'>
+                                                        <a className="dropdown-item text-black-50 lh-lg" >
+                                                            Red Cross for Blind
+                                                        </a>
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li className="">
+                                            <Link to="/courses/re-script-retreat" className='text-decoration-none'>
+                                                <a className="dropdown-item text-black-50 lh-lg" >
+                                                    Re-script Retreat
                                                 </a>
                                             </Link>
                                         </li>
                                     </ul>
                                 </li>
                             ) : (
-                                <p className='m-0 p-0'></p>
+                                <p className='m-0 p-0 d-none'></p>
                             )}
 
                             
