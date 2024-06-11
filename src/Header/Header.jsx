@@ -58,7 +58,7 @@ function Header() {
             </div>
 
 
-            <nav className="navbar shadow navbar-expand-lg bg-white sticky-top ">
+            <nav className="navbar shadow-sm navbar-expand-lg bg-white sticky-top ">
                 <div className="container">
                     <Link to='/'>
                     <a className="navbar-brand ">
@@ -494,39 +494,44 @@ function Header() {
                                     </a>
                                 </Link>
                                 <ul className="dropdown-menu  rounded-0 shadow border-0" style={{ backgroundColor: '#ffffffe7' }}>
-                                    <li className="">
-                                        <Link to="/user-login" className='text-decoration-none'>
-                                            <a className="dropdown-item text-black-50  lh-lg">
-                                                Login
-                                            </a>
-                                        </Link>
-                                    </li>
-                                    <li className="">
-                                        <Link to="/user-registration" className='text-decoration-none'>
-                                            <a className="dropdown-item text-black-50 lh-lg" >
-                                               Registration
-                                            </a>
-                                        </Link>
-                                    </li>
-                                    <li className="">
-                                        <Link className='text-decoration-none'>
-                                            <a className="dropdown-item text-black-50 lh-lg" onClick={handleLogout}  >
-                                               Logout 
-                                            </a>
-                                            <ToastContainer />
-                                        </Link>
-                                    </li>
-                                    
-                                    
+                                    {!token ? (
+                                        <>
+                                            <li className="">
+                                                <Link to="/user-login" className="dropdown-item text-black-50 lh-lg text-decoration-none">
+                                                    Login
+                                                </Link>
+                                            </li>
+                                            <li className="">
+                                                <Link to="/user-registration" className="dropdown-item text-black-50 lh-lg text-decoration-none">
+                                                    Registration
+                                                </Link>
+                                            </li>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <li className="">
+                                                <Link to="/user-profile" className="dropdown-item text-black-50 lh-lg text-decoration-none">
+                                                    User Profile
+                                                </Link>
+                                            </li>
+                                            <li className="">
+                                                <Link to="/" className="dropdown-item text-black-50 lh-lg text-decoration-none" onClick={handleLogout}>
+                                                    Logout
+                                                </Link>
+                                                <ToastContainer />
+                                            </li>
+                                        </>
+                                    )}
+
                                 </ul>
                             </li>
 
                         </ul>
-                        <div className=''>
+                        {/* <div className=''>
                             <Link to='/login'>
                                 <button className='btn footerbg'>LogIn</button>
                             </Link>
-                        </div>
+                        </div> */}
 
                     </div>
 
