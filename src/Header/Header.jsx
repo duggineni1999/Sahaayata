@@ -7,10 +7,14 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useSelector } from 'react-redux';
 import { logoutSuccess } from '../authSlice';
 import { useDispatch } from 'react-redux';
+import axios from 'axios';
+import Workshop from '../Workshop/Workshop';
 
 function Header() {
     const token = useSelector(state => state.auth.token);
     const dispatch = useDispatch();
+    const [workshopHeadings, setWorkshopHeadings] = useState([]);
+    const [data, setData] = useState([])
     const handleLogout = () => {
         // Dispatch the logoutSuccess action to update the token to null
         dispatch(logoutSuccess());
@@ -21,18 +25,36 @@ function Header() {
     
     const [token1, setToken] = useState(null);
 
+    const handleHeadingClick = (heading) => {
+        localStorage.setItem('activeHeading', heading);
+    };
     useEffect(() => {
-      const accessToken = localStorage.getItem('token');
-      if (accessToken) {
-        setToken(accessToken);
-        try {
-          const decodedToken = jwtDecode(accessToken);
-          console.log('Decoded Token:', decodedToken);
-        } catch (error) {
-          console.error('Invalid token:', error);
-        }
-      }
+    //   const accessToken = localStorage.getItem('token');
+    //   if (accessToken) {
+    //     setToken(accessToken);
+    //     try {
+    //       const decodedToken = jwtDecode(accessToken);
+    //       console.log('Decoded Token:', decodedToken);
+    //     } catch (error) {
+    //       console.error('Invalid token:', error);
+    //     }
+    //   }
+      fetchData()
     }, []);
+
+    const fetchData = async () => {
+        try {
+          const response = await axios.get("http://192.168.5.34:8000/workshop");
+          setData(response.data)
+  
+          const headings = response.data.map(workshop => workshop.heading);
+            setWorkshopHeadings(headings);
+      
+
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      };
     
     return (
         <div>
@@ -272,7 +294,6 @@ function Header() {
                                   
                                   
                                    
-                                    
                                  
                                 </ul>
                             </li>
@@ -287,74 +308,18 @@ function Header() {
                                         </a>
                                     </Link>
                                     <ul className="dropdown-menu  rounded-0 shadow border-0" style={{ backgroundColor: '#ffffffe7' }}>
-                                        <li className="">
-                                            <Link to="/courses/anubhava-workshop" className='text-decoration-none'>
-                                                <a className="dropdown-item text-black-50  lh-lg">
-                                                    Anubhava Workshop
-                                                </a>
-                                            </Link>
-                                        </li>
-                                        <li className="">
-                                            <Link to="/courses/corporate-workshop" className='text-decoration-none'>
-                                                <a className="dropdown-item text-black-50 lh-lg" >
-                                                    Corporate Workshop
-                                                </a>
-                                            </Link>
-                                        </li>
-                                        <li className="">
-                                            <Link to="/courses/vardaan-workshop" className='text-decoration-none'>
-                                                <a className="dropdown-item text-black-50  lh-lg" >
-                                                    Vardaan Workshop
-                                                </a>
-                                            </Link>
-                                        </li>
-                                        <li className="">
-                                            <Link to="/courses/sahaayata-workshop" className='text-decoration-none'>
-                                                <a className="dropdown-item text-black-50  lh-lg" >
-                                                    Sahaayata Workshop
-                                                </a>
-                                            </Link>
-                                        </li>
-                                        <li className="">
-                                            <Link to="/courses/shloka-chanting-courses" className='text-decoration-none'>
-                                                <a className="dropdown-item text-black-50 lh-lg" >
-                                                    Shloka Chanting Courses
-                                                </a>
-                                            </Link>
-                                        </li>
-                                        <li className="">
-                                            <Link to="/courses/shloka-chanting-courses" className='text-decoration-none'>
-                                                <a className="dropdown-item text-black-50 lh-lg" >
-                                                    Shloka Chanting Courses
-                                                </a>
-                                            </Link>
-                                        </li>
-                                        <li className=" position-relative faculty">
-                                            <Link to="/" className='text-decoration-none'>
-                                                <a className="dropdown-item  text-black-50 lh-lg d-flex justify-content-between" >
-                                                    Youth Excellence Workshop {''}
-                                                    <span>
-                                                        <i className="fa fa-angle-left ms-1 drop-icon fw-bold fweicon" data-bs-toggle="dropdown" style={{ color: '#5AADDD', }} aria-hidden="true"></i>
-                                                    </span>
-                                                </a>
-                                            </Link>
-                                            <ul className="dropdown-menu px-1 position-absolute  rounded-0 members1 shadow border-0" style={{ backgroundColor: '#ffffffe7' }}>
-                                                <li className="">
-                                                    <Link to="/about/faculty/sri-kiran" className='text-decoration-none'>
-                                                        <a className="dropdown-item text-black-50 lh-lg" >
-                                                            Red Cross for Blind
-                                                        </a>
-                                                    </Link>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li className="">
-                                            <Link to="/courses/re-script-retreat" className='text-decoration-none'>
-                                                <a className="dropdown-item text-black-50 lh-lg" >
-                                                    Re-script Retreat
-                                                </a>
-                                            </Link>
-                                        </li>
+                                        {workshopHeadings.map((heading, index) => (
+                                            <li key={index} className="">
+                                                <Link to={`/courses/workshops`} className='text-decoration-none'>
+                                                    <a
+                                                        className="dropdown-item text-black-50 lh-lg"
+                                                        onClick={() => handleHeadingClick(heading)}
+                                                    >
+                                                        {heading}
+                                                    </a>
+                                                </Link>
+                                            </li>
+                                        ))}
                                     </ul>
                                 </li>
                             ) : (

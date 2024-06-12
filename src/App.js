@@ -50,6 +50,8 @@ import Rural from './Gallery/Rural'
 import Login from './UserPortal/Login';
 import Registration from './UserPortal/Registration';
 import AdminProtal from './Admin/AdminProtal';
+import UserProfile from './UserPortal/UserProfile';
+import Workshop from './Workshop/Workshop';
 
 
 
@@ -109,6 +111,7 @@ function App() {
           <Route path="/photo-gallery/general-public" element={<GeneralPublic />} />
           <Route path="/photo-gallery/corporate-and-intelligentia" element={<CorporateIntel />} />
           <Route path="/user-login" element={<Login />} />
+          <Route path="/user-profile" element={<UserProfile />} />
           <Route path="/user-registration" element={<Registration />} />
           <Route path="/terms" element={<TermsUse />} />
           <Route path="/privacy" element={<Privacy />} />
@@ -117,6 +120,7 @@ function App() {
           <Route path='/login' element={<LogIn/>}/>
           <Route path='/register' element={<Register/>}/>
           <Route path='/admin-portal' element={<AdminProtal />}/>
+          <Route path='/courses/workshops' element={<Workshop />}/>
         </Routes>
        
         <Footer />
