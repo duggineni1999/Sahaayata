@@ -1,11 +1,13 @@
 import React, { useState, useRef } from 'react';
 import JoditEditor from "jodit-react";
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function AdminPortal() {
   const editor = useRef(null);
+  const navigate = useNavigate()
   const [content, setContent] = useState('');
   const [workshopHeading, setWorkshopHeading] = useState('');
 
@@ -41,6 +43,10 @@ function AdminPortal() {
       toast.error('Failed to fetch content');
     }
   };
+  const gotoForms =()=>{
+    navigate('/booking')
+    
+  }
 
   const handleSubmit = async () => {
     const data = {
@@ -81,7 +87,11 @@ function AdminPortal() {
           value={workshopHeading}
           onChange={(e) => setWorkshopHeading(e.target.value)}
         />
-        <button onClick={fetchContentByHeading} className="btn btn-secondary mt-3">Load Content</button>
+        <div className='d-flex justify-content-between'>
+            <button onClick={fetchContentByHeading} className="btn btn-secondary mt-3">Load Content</button>
+            <button onClick={gotoForms} className="btn btn-secondary mt-3"> Create Forms</button>
+        </div>
+        
       </div>
       <JoditEditor
         ref={editor}
