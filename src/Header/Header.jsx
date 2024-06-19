@@ -14,7 +14,8 @@ function Header() {
     const token = useSelector(state => state.auth.token);
     const dispatch = useDispatch();
     const [workshopHeadings, setWorkshopHeadings] = useState([]);
-    const [data, setData] = useState([])
+    const [data, setData] = useState([]);
+    const [isadmin, setIsadmin] = useState('')
     const handleLogout = () => {
         // Dispatch the logoutSuccess action to update the token to null
         dispatch(logoutSuccess());
@@ -29,23 +30,27 @@ function Header() {
         localStorage.setItem('activeHeading', heading);
     };
     useEffect(() => {
-    //   const accessToken = localStorage.getItem('token');
-    //   if (accessToken) {
-    //     setToken(accessToken);
-    //     try {
-    //       const decodedToken = jwtDecode(accessToken);
-    //       console.log('Decoded Token:', decodedToken);
-    //     } catch (error) {
-    //       console.error('Invalid token:', error);
-    //     }
-    //   }
+      const accessToken = localStorage.getItem('token');
+      if (accessToken) {
+        setToken(accessToken);
+        try {
+          const decodedToken = jwtDecode(accessToken);
+
+          console.log('Decoded Token:', decodedToken.isAdmin);
+          setIsadmin(decodedToken.isAdmin)
+
+        } catch (error) {
+          console.error('Invalid token:', error);
+        }
+      }
       fetchData()
-    }, []);
+    }, [token]);
 
     const fetchData = async () => {
         try {
           const response = await axios.get("http://192.168.5.34:8000/workshop");
           setData(response.data)
+          console.log(response.data)
   
           const headings = response.data.map(workshop => workshop.heading);
             setWorkshopHeadings(headings);
@@ -79,7 +84,6 @@ function Header() {
                 </div>
             </div>
 
-
             <nav className="navbar shadow-sm navbar-expand-lg bg-white sticky-top ">
                 <div className="container">
                     <Link to='/'>
@@ -87,7 +91,6 @@ function Header() {
                         <img src= {logo} alt="Logo" height="80px" />
                     </a>
                     </Link>
-
                     <div className="collapse navbar-collapse bg-white px-3 " id="navbarText">
                         <ul className="navbar-nav position-relative mx-auto mb-2 mb-lg-0 gap-0 gap-xxl-3">
                             <li className="nav-item">
@@ -281,9 +284,6 @@ function Header() {
                                             </a>
                                         </Link>
                                     </li>
-                                  
-                                   
-                                  
                                     <li className="">
                                         <Link to="/joinsahayak" className='text-decoration-none'>
                                             <a className="dropdown-item text-black-50 lh-lg" >
@@ -291,10 +291,6 @@ function Header() {
                                             </a>
                                         </Link>
                                     </li>
-                                  
-                                  
-                                   
-                                 
                                 </ul>
                             </li>
                             {token ? (
@@ -308,26 +304,55 @@ function Header() {
                                         </a>
                                     </Link>
                                     <ul className="dropdown-menu  rounded-0 shadow border-0" style={{ backgroundColor: '#ffffffe7' }}>
-                                        {workshopHeadings.map((heading, index) => (
-                                            <li key={index} className="">
-                                                <Link to={`/courses/workshops`} className='text-decoration-none'>
-                                                    <a
-                                                        className="dropdown-item text-black-50 lh-lg"
-                                                        onClick={() => handleHeadingClick(heading)}
-                                                    >
-                                                        {heading}
-                                                    </a>
-                                                </Link>
-                                            </li>
-                                        ))}
+                                    { isadmin == 1 ? (
+                                            <>
+                                                <li className="">
+                                                    <Link to={'/admin-portal'} className='text-decoration-none'>
+                                                        <a
+                                                            className="dropdown-item btn  text-black-50 lh-lg"
+                                                        >
+                                                            Create WorkShops
+                                                        </a>
+                                                    </Link>
+                                                </li>
+                                                {workshopHeadings.map((heading, index) => (
+                                                    <li key={index} className="">
+                                                        <Link to={`/courses/workshops`} className='text-decoration-none'>
+                                                            <a
+                                                                className="dropdown-item text-black-50 lh-lg"
+                                                                onClick={() => handleHeadingClick(heading)}
+                                                            >
+                                                                {heading}
+                                                            </a>
+                                                        </Link>
+                                                    </li>
+                                                ))}
+
+                                            </>
+                                        ):(
+                                                <>
+                                                    {workshopHeadings.map((heading, index) => (
+                                                        <li key={index} className="">
+                                                            <Link to={`/courses/workshops`} className='text-decoration-none'>
+                                                                <a
+                                                                    className="dropdown-item text-black-50 lh-lg"
+                                                                    onClick={() => handleHeadingClick(heading)}
+                                                                >
+                                                                    {heading}
+                                                                </a>
+                                                            </Link>
+                                                        </li>
+                                                    ))}
+                                                </>
+                                        )}
+                                        
+                                        
                                     </ul>
                                 </li>
                             ) : (
                                 <p className='m-0 p-0 d-none'></p>
                             )}
-
                             
-
                             < li className="nav-item dropdown-center" >
                                 <Link to="/" className='text-decoration-none'>
                                     <a className="nav-link text-black-50 position-relative text-uppercase" aria-expanded="true">
@@ -452,7 +477,7 @@ function Header() {
                             < li className="nav-item dropdown-center" >
                                 <Link to="/" className='text-decoration-none'>
                                     <a className="nav-link text-black-50 position-relative text-uppercase" aria-expanded="true">
-                                        User Portal{''}
+                                    <i className="fa-solid fa-users fs-4 "></i>
                                         <span>
                                             <i className="fa fa-angle-down ms-1 drop-icon fw-bold" data-bs-toggle="dropdown" style={{ color: '#5AADDD', }} aria-hidden="true"></i>
                                         </span>
@@ -474,11 +499,22 @@ function Header() {
                                         </>
                                     ) : (
                                         <>
+                                        { !isadmin == 1 ? (
                                             <li className="">
-                                                <Link to="/user-profile" className="dropdown-item text-black-50 lh-lg text-decoration-none">
-                                                    User Profile
+                                            <Link to="/user-profile" className="dropdown-item text-black-50 lh-lg text-decoration-none">
+                                                User Profile
+                                            </Link>
+                                        </li>
+
+                                        ):(
+                                            <li className="">
+                                                <Link to="/admin-profile" className="dropdown-item text-black-50 lh-lg text-decoration-none">
+                                                    Admin Profile
                                                 </Link>
                                             </li>
+
+                                        )}
+                                            
                                             <li className="">
                                                 <Link to="/" className="dropdown-item text-black-50 lh-lg text-decoration-none" onClick={handleLogout}>
                                                     Logout

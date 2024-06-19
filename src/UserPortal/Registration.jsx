@@ -7,12 +7,13 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Registration = () => {
   const [userDetails, setUserDetails] = useState({
-    username: '',
+    first_name: '',
+    last_name: '',
     email: '',
     password: '',
-    confirmPassword: '', 
+    confirmPassword: '',
+    isadmin: false, // Assuming default is non-admin
   });
-  const [error, setError] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -31,22 +32,24 @@ const Registration = () => {
     }
 
     try {
-      const response = await axios.post('http://192.168.5.34:8000/login', userDetails);
-      if (response.data.success) {
-        toast.success(response.data.message);
+      const response = await axios.post('http://192.168.5.34:8000/register', userDetails);
+      if (response.data.message) {
+        toast.success('User registered successfully');
         setUserDetails({
-          username: '',
+          first_name: '',
+          last_name: '',
           email: '',
           password: '',
-          confirmPassword: '', 
+          confirmPassword: '',
+          isadmin: false,
         });
         // Redirect or perform other actions after successful registration
       } else {
-        toast.error(response.data.message);
+        toast.error(response.data.error || 'Registration failed');
       }
     } catch (error) {
       console.error('Error registering user:', error);
-      toast.error('An error occurred. Please try again later.');
+      toast.error(error.response.data.error || 'An error occurred. Please try again later.');
     }
   };
 
@@ -55,22 +58,35 @@ const Registration = () => {
       <Container>
         <Row className="justify-content-md-center py-4">
           <Col md={6}>
-            <h2>User Registration</h2>
+            <h2>Registration</h2>
             <Form className='mt-5' onSubmit={handleSubmit}>
               <ToastContainer />
-              <Form.Group controlId="formUsername">
-                <Form.Label>Username</Form.Label>
+              <Form.Group controlId="formFirstName">
+                <Form.Label>First Name</Form.Label>
                 <Form.Control
                   type="text"
                   className='mb-3'
-                  name="username"
-                  value={userDetails.username}
+                  name="first_name"
+                  value={userDetails.first_name}
                   onChange={handleChange}
-                  placeholder="Enter username"
+                  placeholder="Enter first name"
                   required
                 />
               </Form.Group>
-              
+
+              <Form.Group controlId="formLastName">
+                <Form.Label>Last Name</Form.Label>
+                <Form.Control
+                  type="text"
+                  className='mb-3'
+                  name="last_name"
+                  value={userDetails.last_name}
+                  onChange={handleChange}
+                  placeholder="Enter last name"
+                  required
+                />
+              </Form.Group>
+
               <Form.Group controlId="formEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control
@@ -96,7 +112,7 @@ const Registration = () => {
                   required
                 />
               </Form.Group>
-              
+
               <Form.Group controlId="formConfirmPassword">
                 <Form.Label>Confirm Password</Form.Label>
                 <Form.Control
@@ -115,9 +131,10 @@ const Registration = () => {
                   Register
                 </Button>
               </div>
+
               <div className='d-flex justify-content-center my-4'>
                 <Link to='/user-login'>
-                  <p>If You Already Registered Please Login</p>
+                  <p>If you are already registered, please login here.</p>
                 </Link>
               </div>
             </Form>

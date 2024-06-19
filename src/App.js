@@ -52,6 +52,9 @@ import Registration from './UserPortal/Registration';
 import AdminProtal from './Admin/AdminProtal';
 import UserProfile from './UserPortal/UserProfile';
 import Workshop from './Workshop/Workshop';
+import MyComponent from './Admin/WorkShopForms/CourseBooking';
+import DisplayFormData from './UserForms/Forms';
+import Forms from './UserForms/TestingFroms';
 
 
 
@@ -121,6 +124,9 @@ function App() {
           <Route path='/register' element={<Register/>}/>
           <Route path='/admin-portal' element={<AdminProtal />}/>
           <Route path='/courses/workshops' element={<Workshop />}/>
+          <Route path='/booking' element={<MyComponent />}/>
+          <Route path='/displayform' element={<DisplayFormData />}/>
+          <Route path='/forms' element={<Forms />}/>
         </Routes>
        
         <Footer />

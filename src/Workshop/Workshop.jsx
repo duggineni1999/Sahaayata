@@ -12,12 +12,13 @@ const Workshop = () => {
     }
 
     try {
-      const response = await axios.post(`http://192.168.5.34:8000/workshops`, { heading });
+      const response = await axios.post(`http://192.168.5.34:8000/workshops/get`, { heading });
       console.log('Workshop data:', response.data);
       const content = response.data.map(workshop => workshop.content);
       setBodyData(content);
     } catch (error) {
       console.error('Error fetching workshop content:', error);
+      // Handle error: Show a toast message or set an error state
     }
   }, [heading]);
 
@@ -41,7 +42,7 @@ const Workshop = () => {
   }, []);
 
   useEffect(() => {
-    // If heading is changed within the same document context
+    // Polling for localStorage changes every second
     const interval = setInterval(() => {
       const activeHeading = localStorage.getItem('activeHeading');
       if (activeHeading !== heading) {
@@ -49,12 +50,12 @@ const Workshop = () => {
       }
     }, 1000); // Check every second
 
-    return () => clearInterval(interval);
+    return () => clearInterval(interval); // Cleanup interval on component unmount
   }, [heading]);
 
   return (
     <div className=''>
-      
+      {/* Render workshop content */}
       <div className='container py-5' dangerouslySetInnerHTML={{ __html: bodydata.join('') }} />
     </div>
   );

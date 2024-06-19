@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
@@ -9,11 +9,25 @@ import { loginSuccess } from '../authSlice';
 
 const Login = () => {
   const navigate = useNavigate();
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
+
   const [userDetails, setUserDetails] = useState({
     email: '',
     password: '',
   });
+  const [rememberMe, setRememberMe] = useState(false);
+
+  useEffect(() => {
+    const storedDetails = JSON.parse(localStorage.getItem('rememberedDetails'));
+
+    if (storedDetails) {
+      setUserDetails({
+        email: storedDetails.email,
+        password: storedDetails.password,
+      });
+      setRememberMe(storedDetails.ischecked);
+    }
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,36 +37,50 @@ const Login = () => {
     });
   };
 
+  const handleRememberMe = (e) => {
+    setRememberMe(e.target.checked);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!userDetails.email || !userDetails.password) {
       toast.warning('Please fill out all fields');
       return;
     }
-    else{
-      try {
-        const response = await axios.post('http://192.168.5.34:8000/login', userDetails, {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
-  
-        dispatch(loginSuccess(response.data.accessToken)); 
-        localStorage.setItem('token', response.data.accessToken);
-        navigate('/');
-  
-        // Resetting form values
-        setUserDetails({
-          email: '',
-          password: '',
-        });
-      } catch (error) {
-        toast.error('Invalid Credentials');
-        console.error('Error:', error);
+
+    try {
+      const response = await axios.post('http://192.168.5.34:8000/login', userDetails, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      dispatch(loginSuccess(response.data.accessToken));
+      // Save credentials to localStorage if Remember Me is checked
+      if (rememberMe) {
+        const userRememberDetails = {
+          email: userDetails.email,
+          password: userDetails.password,
+          ischecked: rememberMe
+        }
+        localStorage.setItem('rememberedDetails', JSON.stringify(userRememberDetails));
+      } else {
+        localStorage.removeItem('rememberedDetails');
       }
 
-    }
+      localStorage.setItem('token', response.data.accessToken);
+      navigate('/');
+      
+      // Reset form values
+      setUserDetails({
+        email: '',
+        password: '',
+      });
 
+    } catch (error) {
+      toast.error('Invalid Credentials');
+      console.error('Error:', error);
+    }
   };
 
   return (
@@ -60,11 +88,11 @@ const Login = () => {
       <Container>
         <Row className="justify-content-md-center py-5">
           <Col md={6}>
-            <h2>User Login</h2>
+            <h2>Login</h2>
             <Form className='mt-5' onSubmit={handleSubmit}>
               <ToastContainer />
               <Form.Group controlId="formemail">
-                <Form.Label>email</Form.Label>
+                <Form.Label>Email</Form.Label>
                 <Form.Control
                   type="text"
                   className='mb-3'
@@ -89,11 +117,16 @@ const Login = () => {
                 />
               </Form.Group>
 
+              <Form.Group controlId="formRememberMe">
+                <Form.Check
+                  type="checkbox"
+                  label="Remember Me"
+                  checked={rememberMe}
+                  onChange={handleRememberMe}
+                />
+              </Form.Group>
 
-           
-
-            <div className='d-flex justify-content-center'>
-
+              <div className='d-flex justify-content-center'>
                 <Button className='w-50 mt-3' variant="primary" type="submit">
                   Login
                 </Button>
