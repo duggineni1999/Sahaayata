@@ -14,6 +14,8 @@ function Header() {
     const token = useSelector(state => state.auth.token);
     const dispatch = useDispatch();
     const [workshopHeadings, setWorkshopHeadings] = useState([]);
+    const [workshopAbout, setWorkshopAbout] = useState([]);
+    const [workshopImmediate,setWorkshopImmediate] = useState([]);
     const [data, setData] = useState([]);
     const [isadmin, setIsadmin] = useState('')
     const handleLogout = () => {
@@ -25,6 +27,20 @@ function Header() {
       };
     
     const [token1, setToken] = useState(null);
+
+
+    const [user, setUser] = useState(null);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+          const image = localStorage.getItem('userimage');
+          console.log(image)
+          setUser(image); // Update the state with the fetched image
+        }, 1000); // Fetch data every second (1000 milliseconds)
+    
+        return () => clearInterval(interval); // Cleanup the interval on component unmount
+      }, [user]);
+
 
     const handleHeadingClick = (heading) => {
         localStorage.setItem('activeHeading', heading);
@@ -49,17 +65,27 @@ function Header() {
     const fetchData = async () => {
         try {
           const response = await axios.get("http://192.168.5.34:8000/workshop");
-          setData(response.data)
-          console.log(response.data)
-  
-          const headings = response.data.map(workshop => workshop.heading);
-            setWorkshopHeadings(headings);
+          setData(response.data);
       
+          const workshops = response.data;
+          const filteredHeadings = workshops.filter(workshop => workshop.category === 'workshop')
+                                           .map(workshop => workshop.heading);
+            const filterAbouts = workshops.filter(workshop => workshop.category === 'about')
+            .map(workshop => workshop.heading);
+            const filterImmediate = workshops.filter(workshop => workshop.category === 'immediate')
+            .map(workshop => workshop.heading);
+          
+          setWorkshopHeadings(filteredHeadings);
+          console.log(filterAbouts)
+          setWorkshopAbout(filterAbouts)
+          setWorkshopImmediate(filterImmediate)
 
+      
         } catch (error) {
           console.error('Error fetching data:', error);
         }
       };
+      
     
     return (
         <div>
@@ -111,7 +137,7 @@ function Header() {
                                     </a>
                                 </Link>
                                 <ul className="dropdown-menu px-1  rounded-0 shadow border-0" style={{ backgroundColor: '#ffffffe7' }}>
-                                    <li className="">
+                                    {/* <li className="">
                                         <Link to="/about/what-is-sahaayata" className='text-decoration-none'>
                                             <a className="dropdown-item text-black-50  lh-lg">
                                                 What Is Sahaayata
@@ -193,7 +219,20 @@ function Header() {
                                             </li>
 
                                         </ul>
-                                    </li>
+                                    </li> */}
+
+                                    {workshopAbout.map((heading, index) => (
+                                        <li key={index} className="">
+                                            <Link to={`/courses/workshops`} className='text-decoration-none'>
+                                                <a
+                                                    className="dropdown-item text-black-50 lh-lg"
+                                                    onClick={() => handleHeadingClick(heading)}
+                                                >
+                                                    {heading}
+                                                </a>
+                                            </Link>
+                                        </li>
+                                    ))}
                                 </ul>
                             </li>
 
@@ -207,7 +246,7 @@ function Header() {
                                     </a>
                                 </Link>
                                 <ul className="dropdown-menu  rounded-0 shadow border-0" style={{ backgroundColor: '#ffffffe7' }}>
-                                <li className="">
+                                {/* <li className="">
                                         <Link to="/sahsahayataprayer" className='text-decoration-none'>
                                             <a className="dropdown-item text-black-50 lh-lg" >
                                              SahayataPrayer and MeditationCenter
@@ -290,7 +329,20 @@ function Header() {
                                                Join us as a Sahayak
                                             </a>
                                         </Link>
-                                    </li>
+                                    </li> */}
+
+                                    {workshopImmediate.map((heading, index) => (
+                                        <li key={index} className="">
+                                            <Link to={`/courses/workshops`} className='text-decoration-none'>
+                                                <a
+                                                    className="dropdown-item text-black-50 lh-lg"
+                                                    onClick={() => handleHeadingClick(heading)}
+                                                >
+                                                    {heading}
+                                                </a>
+                                            </Link>
+                                        </li>
+                                    ))}
                                 </ul>
                             </li>
                             {token ? (
@@ -474,10 +526,19 @@ function Header() {
                                 </Link>
                             </li>
 
-                            < li className="nav-item dropdown-center" >
-                                <Link to="/" className='text-decoration-none'>
-                                    <a className="nav-link text-black-50 position-relative text-uppercase" aria-expanded="true">
-                                    <i className="fa-solid fa-users fs-4 "></i>
+                            < li className="nav-item dropdown-center my-auto" >
+                                <Link to="/" className='text-decoration-none '>
+                                    <a className="nav-link text-black-50 position-relative text-uppercase px-0 py-0" aria-expanded="true">
+                                        {!isadmin == 0 ?(
+                                            <>
+                                                <i class="fa-solid fa-users fs-4"></i>
+                                            </>
+                                        ):(
+                                            <>
+                                            <img src={user} className='' alt="" style={{height:'40px',width:'40px',borderRadius:'50%' }} />
+                                            </>
+                                        )}
+                                    
                                         <span>
                                             <i className="fa fa-angle-down ms-1 drop-icon fw-bold" data-bs-toggle="dropdown" style={{ color: '#5AADDD', }} aria-hidden="true"></i>
                                         </span>

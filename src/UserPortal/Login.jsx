@@ -7,6 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { loginSuccess } from '../authSlice';
 
+
 const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -55,6 +56,10 @@ const Login = () => {
         },
       });
 
+      console.log("data",response.data.id)
+      localStorage.setItem("userId",response.data.id)
+
+    
       dispatch(loginSuccess(response.data.accessToken));
       // Save credentials to localStorage if Remember Me is checked
       if (rememberMe) {

@@ -22,8 +22,8 @@ function Footer() {
               <i className="fas fa-chevron-right chevron"></i> Refund and Cancellation Policy
             </Link>
           </div>
-          <div className='col-md-4'>
-            <p className='mb-0 text-white  footerfont me-0'>© 2016 Sahaayata. All Rights Reserved.</p>
+          <div className='col-md-4 '>
+            <p className='mb-0 text-end text-white  footerfont me-0'>© 2016 Sahaayata. All Rights Reserved.</p>
           </div>
         </div>
       </div>

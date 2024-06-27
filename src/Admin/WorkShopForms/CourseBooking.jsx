@@ -3,6 +3,7 @@ import { Modal, Button, Form } from 'react-bootstrap';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import SocialLinks from '../../Social Media/SocialMedia';
 
 const MyComponent = () => {
     const [showModal, setShowModal] = useState(false);
@@ -10,16 +11,18 @@ const MyComponent = () => {
     const [label, setLabel] = useState('');
     const [placeholder, setPlaceholder] = useState('');
     const [options, setOptions] = useState('');
-    const [required, setRequired] = useState(false); // Added state for required
+    const [required, setRequired] = useState(false); 
     const [heading, setHeading] = useState('');
     const [inputs, setInputs] = useState([]);
+    const [imageFile, setImageFile] = useState(null); 
+    const [imagePreview, setImagePreview] = useState('');
 
     const handleShowModal = (type) => {
         setInputType(type);
         setLabel('');
         setPlaceholder('');
         setOptions('');
-        setRequired(false); // Reset required state when modal is shown
+        setRequired(false);
         setShowModal(true);
     };
 
@@ -77,6 +80,11 @@ const MyComponent = () => {
             html += `    <label>${input.label || 'Date'}</label>`;
             html += `    <input type='date' class='form-control w-100' />`;
             html += `  </div>`;
+        } else if (input.type === 'image') {
+            html += `  <div class='form-group shadow-sm'>`;
+            html += `    <label>${input.label || 'Upload Image'}</label>`;
+            html += `    <img id='img-preview-${index}' src='${imagePreview}' alt='${input.label || 'Upload Image'}' class='img-thumbnail mt-2' />`;
+            html += `  </div>`;
         } else {
             html += `  <div class='form-group' >`;
             html += `    <label>Unsupported Input Type</label>`;
@@ -108,6 +116,13 @@ const MyComponent = () => {
                 type: inputType,
                 label,
                 options: options.split(',').map(option => option.trim()),
+                required 
+            };
+        } else if (inputType === 'image') {
+            newInput = {
+                type: inputType,
+                label,
+                image: imageFile,
                 required
             };
         }
@@ -118,21 +133,52 @@ const MyComponent = () => {
         handleClose();
     };
 
+    const handleImageChange = (e) => {
+        const file = e.target.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                setImageFile(file); // Store the file in state
+                setImagePreview(reader.result); // Convert the file to Base64 string and store in state
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+
     const handleSubmit = async () => {
         if (!heading || inputs.length === 0) {
             toast.warning('Please fill required fields');
             return;
         }
-
+    
         const inputHTMLStrings = {
             heading,
-            content: inputs,
+            content: await Promise.all(inputs.map(async (input) => {
+                if (input.type === 'image' && input.image) {
+                    // Upload the image file to the server
+                    const formData = new FormData();
+                    formData.append('image', input.image);
+    
+                    try {
+                        const response = await axios.post('http://192.168.5.34:8000/upload-image', formData, {
+                            headers: {
+                                'Content-Type': 'multipart/form-data'
+                            }
+                        });
+    
+                        // Replace the image property with the full URL
+                        return { ...input, image: response.data.filePath };
+                    } catch (error) {
+                        console.error('Error uploading image:', error);
+                        toast.error('Failed to upload image');
+                        return input;
+                    }
+                }
+                return input;
+            }))
         };
-        const inputHTMLStringsStr = JSON.stringify(inputHTMLStrings);
-
-        // Store the string in localStorage under the key "inputforms"
-        localStorage.setItem("inputforms", inputHTMLStringsStr);
-
+    
         try {
             const response = await axios.post('http://192.168.5.34:8000/form-post', inputHTMLStrings, {
                 headers: {
@@ -140,7 +186,6 @@ const MyComponent = () => {
                 }
             });
             toast.success('Data successfully stored in the database');
-            // Optionally reset form fields after successful submission
             setHeading('');
             setInputs([]);
         } catch (error) {
@@ -148,9 +193,9 @@ const MyComponent = () => {
             toast.error('Failed to store data in the database');
         }
     };
-
+    
     return (
-        <div className="container py-5">
+        <div className="container pt-5">
             <Form.Group className="justify-content-center" controlId="formInputHeading" style={{ width: '500px' }}>
                 <Form.Label>Title</Form.Label>
                 <Form.Control
@@ -166,13 +211,12 @@ const MyComponent = () => {
                 </Button>
             </div>
 
-            {/* Displaying dynamically generated forms */}
-            <div className="generated-forms container  gap-4" style={{width:"500px"}}>
+            <div className="generated-forms container  gap-4" style={{ width: "500px" }}>
                 <div className="d-flex flex-column gap-3">
                     {inputs.map((input, index) => (
                         <div key={index} className="row">
                             <div className='col-10' dangerouslySetInnerHTML={{ __html: generateHTMLString(input, index) }} />
-                            <div className='col-2 my-auto' > <button type='button' className='btn btn-danger px-2 py-0 btn-sm m-0' style={{borderRadius:"50%"}}  onClick={() => deleteField(index)}>-</button>
+                            <div className='col-2 my-auto' > <button type='button' className='btn btn-danger px-2 py-0 btn-sm m-0' style={{ borderRadius: "50%" }} onClick={() => deleteField(index)}>-</button>
                             </div>
                         </div>
                     ))}
@@ -187,7 +231,7 @@ const MyComponent = () => {
                     <Form>
                         <Form.Group className='mb-3' controlId="formInputType">
                             <Form.Label>Type</Form.Label>
-                            <Form.Control
+                            <Form.Control className='form-select'
                                 as="select"
                                 value={inputType}
                                 onChange={(e) => setInputType(e.target.value)}
@@ -199,9 +243,10 @@ const MyComponent = () => {
                                 <option value="textarea">Textarea</option>
                                 <option value="number">Number</option>
                                 <option value="date">Date</option>
+                                <option value="image">Image</option>
                             </Form.Control>
                         </Form.Group>
-                        <Form.Group  className='mb-3'controlId="formInputLabel">
+                        <Form.Group className='mb-3' controlId="formInputLabel">
                             <Form.Label>Label</Form.Label>
                             <Form.Control
                                 type="text"
@@ -221,16 +266,28 @@ const MyComponent = () => {
                                 />
                             </Form.Group>
                         )}
+                        {(inputType === 'image') && (
+                            <Form.Group controlId="formImage">
+                            <Form.Label>Choose an image file</Form.Label>
+                            <Form.Control
+                                type="file"
+                                accept="image/*"
+                                onChange={handleImageChange}
+                            />
+                        </Form.Group>
+                        )}
                         {(inputType === 'radio' || inputType === 'dropdown' || inputType === 'checkbox') && (
-                            <Form.Group className='mb-3' controlId="formOptions">
-                                <Form.Label>Options (comma-separated)</Form.Label>
-                                <Form.Control
-                                    type="text"
-                                    placeholder="Enter options"
-                                    value={options}
-                                    onChange={(e) => setOptions(e.target.value)}
-                                />
-                            </Form.Group>
+                            <>
+                                <Form.Group className='mb-3' controlId="formOptions">
+                                    <Form.Label>Options (comma-separated)</Form.Label>
+                                    <Form.Control
+                                        type="text"
+                                        placeholder="Enter options"
+                                        value={options}
+                                        onChange={(e) => setOptions(e.target.value)}
+                                    />
+                                </Form.Group>
+                            </>
                         )}
                         <Form.Group className='mb-3' controlId="formRequired">
                             <Form.Check
@@ -258,6 +315,9 @@ const MyComponent = () => {
                 </Button>
             </div>
             <ToastContainer />
+            <div className='pt-5 pb-3'>
+                <SocialLinks />
+            </div>
         </div>
     );
 };

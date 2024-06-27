@@ -55,6 +55,7 @@ import Workshop from './Workshop/Workshop';
 import MyComponent from './Admin/WorkShopForms/CourseBooking';
 import DisplayFormData from './UserForms/Forms';
 import Forms from './UserForms/TestingFroms';
+import Testing from './UserForms/TestingFroms';
 
 
 
@@ -127,11 +128,10 @@ function App() {
           <Route path='/booking' element={<MyComponent />}/>
           <Route path='/displayform' element={<DisplayFormData />}/>
           <Route path='/forms' element={<Forms />}/>
+          <Route path='/testing' element={<Testing />}/>
         </Routes>
        
         <Footer />
-     
-        
       </Router>
 
     </div>

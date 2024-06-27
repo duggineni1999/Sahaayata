@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import SocialLinks from '../Social Media/SocialMedia';
 
 const DisplayFormData = () => {
     const [formData, setFormData] = useState([]);
@@ -116,7 +117,7 @@ const DisplayFormData = () => {
         switch (input.type) {
             case 'text':
                 return (
-                    <div className='form-group shadow-sm mb-3' style={{ width: '500px' }}>
+                    <div className='form-group shadow-sm mb-3' style={{ width: '700px' }}>
                         {renderLabel(input.label || 'Input', input.required)}
                         <input
                             type='text'
@@ -125,18 +126,20 @@ const DisplayFormData = () => {
                             name={name}
                             value={value} // Set the value from state
                             onChange={handleInputChange}
+                            required={input.required} // Conditionally add required attribute
                         />
                     </div>
                 );
             case 'dropdown':
                 return (
-                    <div className='shadow-sm mb-3' style={{ width: '500px' }}>
+                    <div className='shadow-sm mb-3' style={{ width: '700px' }}>
                         {renderLabel(input.label || 'Dropdown', input.required)}
                         <select
                             className='form-select'
                             name={name}
                             value={value} // Set the value from state
                             onChange={handleInputChange}
+                            required={input.required} // Conditionally add required attribute
                         >
                             {input.options.map((option, index) => (
                                 <option key={index} value={option}>{option}</option>
@@ -146,7 +149,7 @@ const DisplayFormData = () => {
                 );
             case 'radio':
                 return (
-                    <div className='form-check mb-3 p-0' style={{ width: '500px' }}>
+                    <div className='form-check mb-3 p-0' style={{ width: '700px' }}>
                         {renderLabel(input.label || 'Radio Options', input.required)}
                         {input.options.map((option, index) => (
                             <div className="form-check" key={index}>
@@ -158,6 +161,7 @@ const DisplayFormData = () => {
                                     value={option}
                                     checked={value === option} // Set the checked status based on state
                                     onChange={handleInputChange}
+                                    required={input.required} // Conditionally add required attribute
                                 />
                                 <label className="form-check-label" htmlFor={`${name}-${option}`}>{option}</label>
                             </div>
@@ -166,7 +170,7 @@ const DisplayFormData = () => {
                 );
             case 'checkbox':
                 return (
-                    <div className='form-check mb-3 p-0' style={{ width: '500px' }}>
+                    <div className='form-check mb-3 p-0' style={{ width: '700px' }}>
                         {renderLabel(input.label || 'Checkbox Options', input.required)}
                         {input.options.map((option, index) => (
                             <div className="form-check" key={index}>
@@ -186,7 +190,7 @@ const DisplayFormData = () => {
                 );
             case 'textarea':
                 return (
-                    <div className='form-group shadow-sm mb-3' style={{ width: '500px' }}>
+                    <div className='form-group shadow-sm mb-3' style={{ width: '700px' }}>
                         {renderLabel(input.label || 'Textarea', input.required)}
                         <textarea
                             className='form-control'
@@ -194,12 +198,13 @@ const DisplayFormData = () => {
                             name={name}
                             value={value} // Set the value from state
                             onChange={handleInputChange}
+                            required={input.required} // Conditionally add required attribute
                         ></textarea>
                     </div>
                 );
             case 'number':
                 return (
-                    <div className='form-group shadow-sm mb-3' style={{ width: '500px' }}>
+                    <div className='form-group shadow-sm mb-3' style={{ width: '700px' }}>
                         {renderLabel(input.label || 'Number', input.required)}
                         <input
                             type='number'
@@ -208,12 +213,13 @@ const DisplayFormData = () => {
                             name={name}
                             value={value} // Set the value from state
                             onChange={handleInputChange}
+                            required={input.required} // Conditionally add required attribute
                         />
                     </div>
                 );
             case 'date':
                 return (
-                    <div className='form-group shadow-sm mb-3' style={{ width: '500px' }}>
+                    <div className='form-group shadow-sm mb-3' style={{ width: '700px' }}>
                         {renderLabel(input.label || 'Date', input.required)}
                         <input
                             type='date'
@@ -221,12 +227,25 @@ const DisplayFormData = () => {
                             name={name}
                             value={value} // Set the value from state
                             onChange={handleInputChange}
+                            required={input.required} // Conditionally add required attribute
                         />
                     </div>
                 );
+            case 'image':
+                return (
+                    <div className='form-group shadow-sm mb-3' style={{ width: '700px' }}>
+                        <img
+                            className='img-fluid w-100'
+                            src={input.image} // Use the image property as src
+                            alt={input.label || 'image'}
+                            onChange={handleInputChange}
+                        />
+                    </div>
+                );
+    
             default:
                 return (
-                    <div className='form-group mb-3' style={{ width: '500px' }}>
+                    <div className='form-group mb-3' style={{ width: '700px' }}>
                         {renderLabel('Unsupported Input Type', input.required)}
                         <input
                             type='text'
@@ -241,13 +260,14 @@ const DisplayFormData = () => {
         }
     };
     
+    
     return (
         <div className='container py-5'>
             <ToastContainer />
             <div className='d-flex justify-content-center'>
-                <div className='card' style={{ width: '540px' }}>
+                <div className='card' style={{ width: '740px' }}>
                     <div className='card-header'>
-                        <h6>{heading}</h6>
+                        <h6 className='text-capitalize text-center m-0'>{heading}</h6>
                     </div>
                     <div className='card-body'>
                         {noData ? (
@@ -259,12 +279,13 @@ const DisplayFormData = () => {
                                         {generateFormElement(item)}
                                     </div>
                                 ))}
-                                <button type='submit' className='btn btn-primary'>Submit</button>
+                                <button type='submit' className='btn btn-primary w-100 my-3'>Submit</button>
                             </form>
                         )}
                     </div>
                 </div>
             </div>
+            <SocialLinks />
         </div>
     );
 };
